@@ -1,0 +1,211 @@
+---
+---
+
+// カスタムスタイル設定
+// サイドバーとコンテンツエリアのバランス調整
+
+// サイドバーの幅を広げる
+.side-bar {
+  width: 280px !important;  // デフォルトの248pxから280pxに変更
+  min-width: 280px !important;
+
+  @include mq(md) {
+    width: 280px !important;
+    min-width: 280px !important;
+  }
+
+  @include mq(lg) {
+    width: 320px !important;  // 大画面では少し広めに
+    min-width: 320px !important;
+    max-width: 320px !important;
+  }
+}
+
+// メインコンテンツエリアの調整
+.main {
+  @include mq(md) {
+    margin-left: 280px !important;  // サイドバーの幅に合わせて調整
+    max-width: none;
+  }
+
+  @include mq(lg) {
+    margin-left: 320px !important;
+  }
+}
+
+// メインコンテンツの最大幅を調整
+.main-content-wrap {
+  max-width: 1000px;  // コンテンツの読みやすさのため最大幅を設定
+  padding: 2rem 3rem;
+
+  @include mq(sm) {
+    padding: 1.5rem 2rem;
+  }
+}
+
+// ナビゲーションのフォントサイズを少し大きく
+.nav-list {
+  .nav-list-item {
+    font-size: 15px !important;  // 14pxから15pxに
+
+    .nav-list-link {
+      padding: 0.25rem 1rem;
+
+      &:hover {
+        background-color: rgba(114, 83, 237, 0.05);
+      }
+    }
+  }
+
+  // 子要素のインデント調整
+  .nav-list {
+    .nav-list-item {
+      font-size: 14px !important;
+
+      .nav-list-link {
+        padding-left: 2rem;
+      }
+    }
+  }
+}
+
+// サイト名のスタイル調整
+.site-title {
+  font-size: 20px !important;  // タイトルを少し大きく
+  font-weight: 600;
+}
+
+// 検索ボックスの幅調整
+.search {
+  width: 100%;
+
+  .search-input-wrap {
+    width: 100%;
+
+    .search-input {
+      width: 100%;
+      font-size: 14px;
+      padding: 0.5rem 1rem;
+    }
+  }
+}
+
+// ボタンのスタイル改善
+.btn {
+  padding: 0.5em 1.2em;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+
+  &:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  }
+
+  &.btn-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border: none;
+
+    &:hover {
+      background: linear-gradient(135deg, #5a67d8 0%, #6b4299 100%);
+    }
+  }
+}
+
+// コードブロックのスタイル改善
+.highlighter-rouge {
+  .highlight {
+    background-color: #f7f7f9;
+    border: 1px solid #e1e4e8;
+    border-radius: 6px;
+    padding: 1rem;
+
+    pre {
+      margin: 0;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+  }
+}
+
+// テーブルのスタイル改善
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1.5rem 0;
+
+  thead {
+    background-color: #f7f7f9;
+
+    th {
+      font-weight: 600;
+      text-align: left;
+      padding: 0.75rem;
+      border-bottom: 2px solid #e1e4e8;
+    }
+  }
+
+  tbody {
+    td {
+      padding: 0.75rem;
+      border-bottom: 1px solid #e1e4e8;
+    }
+
+    tr:hover {
+      background-color: #f7f7f9;
+    }
+  }
+}
+
+// 日本語フォントの最適化
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+  line-height: 1.7;
+}
+
+// ヘッダーのスタイル調整
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  line-height: 1.4;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+// リンクのスタイル
+a {
+  transition: color 0.2s ease;
+
+  &:not(.btn) {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+// フッターの位置調整
+.site-footer {
+  margin-top: 3rem;
+  padding: 2rem 0;
+  border-top: 1px solid #e1e4e8;
+}
+
+// レスポンシブ対応の改善
+@include mq(sm) {
+  .side-bar {
+    width: 100% !important;
+    max-width: none !important;
+  }
+
+  .main {
+    margin-left: 0 !important;
+  }
+
+  .main-content-wrap {
+    padding: 1.5rem 1rem;
+  }
+}

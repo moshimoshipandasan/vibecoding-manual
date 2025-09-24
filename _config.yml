@@ -39,6 +39,9 @@ back_to_top_text: "ページトップへ"
 # カラースキーム（light, dark, nilから選択）
 color_scheme: light
 
+# カスタムCSS
+css: custom
+
 # Google Analytics（オプション）
 # ga_tracking: UA-XXXXXXXXX-X
 
