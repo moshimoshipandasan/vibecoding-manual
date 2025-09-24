@@ -1,0 +1,168 @@
+<h1 id="-前提条件の確認">📋 前提条件の確認</h1>
+
+<p>Vibecoding を使い始める前に、お使いのPCに必要なツールがインストールされているか確認しましょう。</p>
+
+<h2 id="-確認が必要なツール">🔍 確認が必要なツール</h2>
+
+<ol>
+  <li><strong>Node.js</strong> (バージョン 16.0 以上)</li>
+  <li><strong>Git</strong> (バージョン 2.0 以上)</li>
+</ol>
+
+<h2 id="-現在の環境を確認する">📊 現在の環境を確認する</h2>
+
+<h3 id="nodejs-のバージョン確認">Node.js のバージョン確認</h3>
+
+<p>ターミナル（コマンドプロンプト）を開いて、以下のコマンドを実行してください：</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>node <span class="nt">--version</span>
+</code></pre></div></div>
+
+<p><strong>期待される出力例：</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>v18.17.0
+</code></pre></div></div>
+
+<p>✅ <strong>成功</strong>: <code class="language-plaintext highlighter-rouge">v16.0.0</code> 以上のバージョンが表示されればOKです
+❌ <strong>失敗</strong>: コマンドが認識されない、または古いバージョンの場合はインストールが必要です</p>
+
+<h3 id="git-のバージョン確認">Git のバージョン確認</h3>
+
+<p>同じくターミナルで以下のコマンドを実行します：</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git <span class="nt">--version</span>
+</code></pre></div></div>
+
+<p><strong>期待される出力例：</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git version 2.42.0
+</code></pre></div></div>
+
+<p>✅ <strong>成功</strong>: <code class="language-plaintext highlighter-rouge">2.0.0</code> 以上のバージョンが表示されればOKです
+❌ <strong>失敗</strong>: コマンドが認識されない場合はインストールが必要です</p>
+
+<h2 id="️-ターミナルの開き方">🖥️ ターミナルの開き方</h2>
+
+<h3 id="windows-の場合">Windows の場合</h3>
+
+<p>以下のいずれかの方法でターミナルを開けます：</p>
+
+<ol>
+  <li><strong>コマンドプロンプト</strong>
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">Windows キー + R</code> を押す</li>
+      <li><code class="language-plaintext highlighter-rouge">cmd</code> と入力して Enter</li>
+    </ul>
+  </li>
+  <li><strong>PowerShell</strong> (推奨)
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">Windows キー + X</code> を押す</li>
+      <li>「Windows PowerShell」を選択</li>
+    </ul>
+  </li>
+  <li><strong>Windows Terminal</strong> (Windows 11)
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">Windows キー</code> を押す</li>
+      <li>「Terminal」と入力して Enter</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="mac-の場合">Mac の場合</h3>
+
+<ol>
+  <li><strong>ターミナル</strong>
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">Command + Space</code> を押す（Spotlight検索）</li>
+      <li>「Terminal」または「ターミナル」と入力</li>
+      <li>Enter キーを押す</li>
+    </ul>
+  </li>
+  <li><strong>または</strong>
+    <ul>
+      <li>Finder を開く</li>
+      <li>アプリケーション → ユーティリティ → ターミナル</li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="️-トラブルシューティング">⚠️ トラブルシューティング</h2>
+
+<h3 id="コマンドが見つかりませんエラーが出る場合">「コマンドが見つかりません」エラーが出る場合</h3>
+
+<p>このエラーは、ツールがインストールされていないか、パスが通っていないことを示しています。</p>
+
+<p><strong>解決方法：</strong></p>
+<ul>
+  <li>お使いのOSに応じたセットアップガイドに進んでください</li>
+  <li><a href="/getting-started/windows-setup">Windows セットアップ</a></li>
+  <li><a href="/getting-started/mac-setup">Mac セットアップ</a></li>
+</ul>
+
+<h3 id="バージョンが古い場合">バージョンが古い場合</h3>
+
+<p>既にインストール済みでもバージョンが古い場合は、アップデートが必要です。セットアップガイドでアップデート方法を説明しています。</p>
+
+<h2 id="-チェックリスト">📝 チェックリスト</h2>
+
+<p>インストール作業に進む前に、以下を確認してください：</p>
+
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />ターミナル（コマンドプロンプト）を開ける</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Node.js のバージョンを確認した</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Git のバージョンを確認した</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />必要に応じてインストールまたはアップデートが必要か判断した</li>
+</ul>
+
+<h2 id="-次のステップ">🎯 次のステップ</h2>
+
+<p>環境確認が完了したら、お使いのOSに応じてセットアップを進めましょう：</p>
+
+<div class="navigation-buttons">
+  <a href="/getting-started/windows-setup" class="os-button windows">
+    🪟 Windows セットアップへ進む
+  </a>
+  <a href="/getting-started/mac-setup" class="os-button mac">
+    🍎 Mac セットアップへ進む
+  </a>
+</div>
+
+<style>
+.navigation-buttons {
+  display: flex;
+  gap: 1rem;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+}
+
+.os-button {
+  flex: 1;
+  min-width: 200px;
+  padding: 1rem;
+  text-align: center;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s;
+  font-weight: bold;
+}
+
+.os-button.windows {
+  background-color: #00bcf2;
+  color: white;
+  border-color: #00bcf2;
+}
+
+.os-button.windows:hover {
+  background-color: #0099cc;
+}
+
+.os-button.mac {
+  background-color: #555;
+  color: white;
+  border-color: #555;
+}
+
+.os-button.mac:hover {
+  background-color: #333;
+}
+</style>
+

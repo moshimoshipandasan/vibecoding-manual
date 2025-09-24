@@ -1,0 +1,223 @@
+<h1 id="-windows-セットアップガイド">🪟 Windows セットアップガイド</h1>
+
+<p>Windows環境でVibecoding開発環境を構築する手順を説明します。</p>
+
+<h2 id="-step-1-nodejs-のインストール">📦 Step 1: Node.js のインストール</h2>
+
+<h3 id="11-インストーラーのダウンロード">1.1 インストーラーのダウンロード</h3>
+
+<ol>
+  <li><a href="https://nodejs.org/">Node.js 公式サイト</a> にアクセス</li>
+  <li><strong>「LTS」バージョン</strong>（推奨版）をクリック</li>
+  <li>ダウンロードが自動的に開始されます</li>
+</ol>
+
+<blockquote>
+  <p>💡 <strong>LTS版を選ぶ理由</strong>: 長期サポート版で安定性が高く、初心者に最適です</p>
+</blockquote>
+
+<h3 id="12-インストール手順">1.2 インストール手順</h3>
+
+<ol>
+  <li>ダウンロードした <code class="language-plaintext highlighter-rouge">node-vXX.XX.X-x64.msi</code> をダブルクリック</li>
+  <li>インストーラーが起動したら「Next」をクリック</li>
+  <li>ライセンス同意画面で「I accept…」にチェックを入れて「Next」</li>
+  <li>インストール先はデフォルトのままで「Next」</li>
+  <li><strong>重要</strong>: 「Automatically install the necessary tools…」にチェックを入れる</li>
+  <li>「Install」をクリック</li>
+  <li>管理者権限を求められたら「はい」を選択</li>
+  <li>インストール完了後、「Finish」をクリック</li>
+</ol>
+
+<h3 id="13-インストールの確認">1.3 インストールの確認</h3>
+
+<p>PowerShell または コマンドプロンプトを<strong>新しく開いて</strong>以下を実行：</p>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">node</span><span class="w"> </span><span class="nt">--version</span><span class="w">
+</span><span class="n">npm</span><span class="w"> </span><span class="nt">--version</span><span class="w">
+</span></code></pre></div></div>
+
+<p>✅ バージョン番号が表示されれば成功です！</p>
+
+<h2 id="-step-2-git-のインストール">🔧 Step 2: Git のインストール</h2>
+
+<h3 id="21-git-for-windows-のダウンロード">2.1 Git for Windows のダウンロード</h3>
+
+<ol>
+  <li><a href="https://git-scm.com/download/win">Git for Windows</a> にアクセス</li>
+  <li>「Download」ボタンをクリック</li>
+  <li>ダウンロードが開始されます</li>
+</ol>
+
+<h3 id="22-インストール手順">2.2 インストール手順</h3>
+
+<ol>
+  <li>ダウンロードした <code class="language-plaintext highlighter-rouge">Git-X.XX.X-64-bit.exe</code> をダブルクリック</li>
+  <li>インストーラーが起動したら「Next」をクリック</li>
+  <li>インストール先はデフォルトのままで「Next」</li>
+  <li>コンポーネント選択画面：
+    <ul>
+      <li>✅ 「Git Bash Here」にチェック</li>
+      <li>✅ 「Git GUI Here」にチェック</li>
+      <li>「Next」をクリック</li>
+    </ul>
+  </li>
+  <li>デフォルトエディタの選択：
+    <ul>
+      <li>初心者は「Use Notepad as Git’s default editor」を選択</li>
+      <li>「Next」をクリック</li>
+    </ul>
+  </li>
+  <li>残りの設定はすべてデフォルトのまま「Next」を連続クリック</li>
+  <li>「Install」をクリック</li>
+  <li>「Finish」をクリック</li>
+</ol>
+
+<h3 id="23-git-の初期設定">2.3 Git の初期設定</h3>
+
+<p>PowerShell を開いて以下のコマンドを実行（自分の情報に置き換えてください）：</p>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">git</span><span class="w"> </span><span class="nx">config</span><span class="w"> </span><span class="nt">--global</span><span class="w"> </span><span class="nx">user.name</span><span class="w"> </span><span class="s2">"あなたの名前"</span><span class="w">
+</span><span class="n">git</span><span class="w"> </span><span class="nx">config</span><span class="w"> </span><span class="nt">--global</span><span class="w"> </span><span class="nx">user.email</span><span class="w"> </span><span class="s2">"your.email@example.com"</span><span class="w">
+</span></code></pre></div></div>
+
+<p><strong>例：</strong></p>
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">git</span><span class="w"> </span><span class="nx">config</span><span class="w"> </span><span class="nt">--global</span><span class="w"> </span><span class="nx">user.name</span><span class="w"> </span><span class="s2">"Taro Yamada"</span><span class="w">
+</span><span class="n">git</span><span class="w"> </span><span class="nx">config</span><span class="w"> </span><span class="nt">--global</span><span class="w"> </span><span class="nx">user.email</span><span class="w"> </span><span class="s2">"taro@example.com"</span><span class="w">
+</span></code></pre></div></div>
+
+<h3 id="24-設定の確認">2.4 設定の確認</h3>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">git</span><span class="w"> </span><span class="nx">config</span><span class="w"> </span><span class="nt">--list</span><span class="w">
+</span></code></pre></div></div>
+
+<p>自分の名前とメールアドレスが表示されれば成功です！</p>
+
+<h2 id="-step-3-vibecoding-cli-ツールのインストール">🚀 Step 3: Vibecoding CLI ツールのインストール</h2>
+
+<h3 id="31-gemini-cli-のインストール">3.1 gemini-cli のインストール</h3>
+
+<p>PowerShell で以下のコマンドを実行：</p>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">npm</span><span class="w"> </span><span class="nx">install</span><span class="w"> </span><span class="nt">-g</span><span class="w"> </span><span class="err">@</span><span class="nx">genkit-ai/cli</span><span class="w">
+</span></code></pre></div></div>
+
+<p>インストール確認：</p>
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">genkit</span><span class="w"> </span><span class="nt">--version</span><span class="w">
+</span></code></pre></div></div>
+
+<h3 id="32-codex-cli-のインストール">3.2 codex-cli のインストール</h3>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">npm</span><span class="w"> </span><span class="nx">install</span><span class="w"> </span><span class="nt">-g</span><span class="w"> </span><span class="err">@</span><span class="nx">vibecoding/codex-cli</span><span class="w">
+</span></code></pre></div></div>
+
+<p>インストール確認：</p>
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">codex</span><span class="w"> </span><span class="nt">--version</span><span class="w">
+</span></code></pre></div></div>
+
+<blockquote>
+  <p>⚠️ <strong>権限エラーが出る場合</strong>: PowerShellを<strong>管理者として実行</strong>してから再度試してください</p>
+  <ul>
+    <li>Windowsキーを右クリック</li>
+    <li>「Windows PowerShell (管理者)」を選択</li>
+  </ul>
+</blockquote>
+
+<h2 id="-step-4-開発環境の最終確認">🎨 Step 4: 開発環境の最終確認</h2>
+
+<p>すべてのツールが正しくインストールされているか確認しましょう：</p>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Node.js の確認</span><span class="w">
+</span><span class="n">node</span><span class="w"> </span><span class="nt">--version</span><span class="w">
+
+</span><span class="c"># npm の確認</span><span class="w">
+</span><span class="n">npm</span><span class="w"> </span><span class="nt">--version</span><span class="w">
+
+</span><span class="c"># Git の確認</span><span class="w">
+</span><span class="n">git</span><span class="w"> </span><span class="nt">--version</span><span class="w">
+
+</span><span class="c"># gemini-cli の確認</span><span class="w">
+</span><span class="n">genkit</span><span class="w"> </span><span class="nt">--version</span><span class="w">
+
+</span><span class="c"># codex-cli の確認</span><span class="w">
+</span><span class="n">codex</span><span class="w"> </span><span class="nt">--version</span><span class="w">
+</span></code></pre></div></div>
+
+<p>すべてのコマンドでバージョン番号が表示されれば、環境構築は完了です！</p>
+
+<h2 id="-トラブルシューティング">🆘 トラブルシューティング</h2>
+
+<h3 id="npm-コマンドが認識されない">npm コマンドが認識されない</h3>
+
+<p><strong>解決方法：</strong></p>
+<ol>
+  <li>PowerShellを再起動</li>
+  <li>それでもダメな場合は、PCを再起動</li>
+  <li>環境変数PATHにNode.jsのパスが追加されているか確認</li>
+</ol>
+
+<h3 id="権限エラー-eacceseperm">権限エラー (EACCES/EPERM)</h3>
+
+<p><strong>解決方法：</strong>
+PowerShellを管理者権限で実行：</p>
+<ol>
+  <li>Windowsキーを右クリック</li>
+  <li>「Windows PowerShell (管理者)」を選択</li>
+  <li>コマンドを再実行</li>
+</ol>
+
+<h3 id="ウイルス対策ソフトの警告">ウイルス対策ソフトの警告</h3>
+
+<p>一部のウイルス対策ソフトはnpmパッケージのインストールを妨げることがあります。</p>
+
+<p><strong>解決方法：</strong></p>
+<ol>
+  <li>一時的にリアルタイム保護を無効化</li>
+  <li>インストールを実行</li>
+  <li>インストール後、保護を再度有効化</li>
+</ol>
+
+<h2 id="-セットアップ完了">✅ セットアップ完了！</h2>
+
+<p>おめでとうございます！Windows環境でのVibecoding開発環境の構築が完了しました。</p>
+
+<div class="next-step-box">
+  <h3>🎯 次のステップ</h3>
+  <p>環境構築が完了したら、最初のプロジェクトを作成してみましょう！</p>
+  <a href="/getting-started/first-project" class="start-button">
+    最初のプロジェクトを始める →
+  </a>
+</div>
+
+<style>
+.next-step-box {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.next-step-box h3 {
+  margin-top: 0;
+  font-size: 1.5rem;
+}
+
+.start-button {
+  display: inline-block;
+  background-color: white;
+  color: #667eea;
+  padding: 0.75rem 2rem;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 1rem;
+  transition: transform 0.3s;
+}
+
+.start-button:hover {
+  transform: translateY(-2px);
+}
+</style>
+

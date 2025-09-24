@@ -1,0 +1,286 @@
+<h1 id="-最初のvibecoding-プロジェクトを始める">🎯 最初のVibecoding プロジェクトを始める</h1>
+
+<p>環境構築が完了したら、いよいよVibecoding を使って最初のプロジェクトを作成しましょう！</p>
+
+<h2 id="-step-1-プロジェクトフォルダの作成">📁 Step 1: プロジェクトフォルダの作成</h2>
+
+<h3 id="11-作業ディレクトリを作成">1.1 作業ディレクトリを作成</h3>
+
+<p>まず、プロジェクト用のフォルダを作成します。</p>
+
+<p><strong>Windows (PowerShell):</strong></p>
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># ドキュメントフォルダに移動</span><span class="w">
+</span><span class="n">cd</span><span class="w"> </span><span class="nx">~/Documents</span><span class="w">
+
+</span><span class="c"># プロジェクト用フォルダを作成</span><span class="w">
+</span><span class="n">mkdir</span><span class="w"> </span><span class="nx">MyVibecodingProjects</span><span class="w">
+
+</span><span class="c"># 作成したフォルダに移動</span><span class="w">
+</span><span class="n">cd</span><span class="w"> </span><span class="nx">MyVibecodingProjects</span><span class="w">
+</span></code></pre></div></div>
+
+<p><strong>Mac (ターミナル):</strong></p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># ホームディレクトリに移動</span>
+<span class="nb">cd</span> ~
+
+<span class="c"># プロジェクト用フォルダを作成</span>
+<span class="nb">mkdir </span>MyVibecodingProjects
+
+<span class="c"># 作成したフォルダに移動</span>
+<span class="nb">cd </span>MyVibecodingProjects
+</code></pre></div></div>
+
+<h2 id="-step-2-vibecoding-プロジェクトの初期化">🚀 Step 2: Vibecoding プロジェクトの初期化</h2>
+
+<h3 id="21-init-コマンドの実行">2.1 <code class="language-plaintext highlighter-rouge">/init</code> コマンドの実行</h3>
+
+<p>プロジェクトフォルダ内で以下のコマンドを実行します：</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>codex /init
+</code></pre></div></div>
+
+<p>このコマンドを実行すると、対話型のセットアップが始まります。</p>
+
+<h3 id="22-プロジェクト情報の入力">2.2 プロジェクト情報の入力</h3>
+
+<p>セットアップ中に以下の質問が表示されます：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>? プロジェクト名を入力してください: my-first-app
+? プロジェクトの説明を入力してください: 私の最初のVibecoding アプリケーション
+? 使用するフレームワークを選択してください: (Use arrow keys)
+  ❯ React
+    Vue
+    Angular
+    Node.js (バックエンド)
+    その他
+</code></pre></div></div>
+
+<p>矢印キーで選択して、Enterキーで決定します。</p>
+
+<h2 id="-step-3-要件定義を始める">📝 Step 3: 要件定義を始める</h2>
+
+<h3 id="31-要件定義モードの開始">3.1 要件定義モードの開始</h3>
+
+<p>プロジェクトの初期化が完了したら、要件定義を開始します：</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>codex requirements
+</code></pre></div></div>
+
+<h3 id="32-対話型要件定義の流れ">3.2 対話型要件定義の流れ</h3>
+
+<p>Vibecoding のAIアシスタントが、プロジェクトの要件について質問してきます。</p>
+
+<p><strong>例：TODOリストアプリを作る場合</strong></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>AI: どのようなアプリケーションを作成しますか？
+
+あなた: TODOリストを管理できるウェブアプリケーションを作りたいです
+
+AI: 了解しました。TODOリストアプリですね。
+    以下の機能について確認させてください：
+
+    1. タスクの追加・削除機能は必要ですか？
+    2. タスクの完了/未完了の管理は必要ですか？
+    3. カテゴリ分けは必要ですか？
+    4. 期限の設定は必要ですか？
+
+あなた: 1と2は必要です。カテゴリ分けと期限設定は今回は不要です。
+
+AI: 承知しました。それでは以下の仕様で進めます：
+    - ✅ タスクの追加機能
+    - ✅ タスクの削除機能
+    - ✅ 完了/未完了の状態管理
+    - ❌ カテゴリ機能（実装しない）
+    - ❌ 期限設定機能（実装しない）
+
+    この内容でよろしいですか？(yes/no)
+
+あなた: yes
+</code></pre></div></div>
+
+<h3 id="33-要件定義のコツ">3.3 要件定義のコツ</h3>
+
+<h4 id="-明確に伝える">🎯 明確に伝える</h4>
+
+<p><strong>良い例：</strong></p>
+<ul>
+  <li>「ユーザーがログインできる機能が必要です」</li>
+  <li>「商品を検索して、カートに追加できるようにしたい」</li>
+  <li>「管理者だけが記事を編集できるようにしたい」</li>
+</ul>
+
+<p><strong>避けるべき例：</strong></p>
+<ul>
+  <li>「いい感じのアプリ」</li>
+  <li>「使いやすくしてください」</li>
+</ul>
+
+<h4 id="-段階的に進める">📊 段階的に進める</h4>
+
+<p>最初はシンプルな機能から始めて、後から機能を追加していくことができます。</p>
+
+<p><strong>推奨アプローチ：</strong></p>
+<ol>
+  <li><strong>MVP（最小限の機能）を最初に定義</strong>
+    <ul>
+      <li>基本機能だけでスタート</li>
+    </ul>
+  </li>
+  <li><strong>動作確認後に機能追加</strong>
+    <ul>
+      <li>基本が動いてから拡張</li>
+    </ul>
+  </li>
+</ol>
+
+<h4 id="-わからないことは質問する">💡 わからないことは質問する</h4>
+
+<p>AIアシスタントに質問することもできます：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>あなた: ユーザー認証とは何ですか？
+
+AI: ユーザー認証は、アプリケーションを使う人が
+    誰なのかを確認する仕組みです。
+    例えば：
+    - ログイン/ログアウト機能
+    - パスワードによる本人確認
+    - 会員登録機能
+    などが含まれます。必要ですか？
+</code></pre></div></div>
+
+<h2 id="-step-4-コード生成">🎨 Step 4: コード生成</h2>
+
+<h3 id="41-要件定義完了後の自動生成">4.1 要件定義完了後の自動生成</h3>
+
+<p>要件定義が完了すると、Vibecoding が自動的にコードを生成します：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>要件定義が完了しました。
+コードを生成中...
+
+✅ プロジェクト構造を作成しました
+✅ 必要なファイルを生成しました
+✅ 依存関係をインストールしました
+
+生成が完了しました！
+</code></pre></div></div>
+
+<h3 id="42-生成されたファイルの確認">4.2 生成されたファイルの確認</h3>
+
+<p>生成されたプロジェクト構造を確認：</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># ファイル一覧を表示</span>
+<span class="nb">ls</span> <span class="nt">-la</span>  <span class="c"># Mac/Linux</span>
+<span class="nb">dir</span>     <span class="c"># Windows</span>
+</code></pre></div></div>
+
+<p>典型的な構造：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>my-first-app/
+├── src/           # ソースコード
+├── public/        # 公開ファイル
+├── package.json   # プロジェクト設定
+├── README.md      # プロジェクト説明
+└── .gitignore     # Git除外設定
+</code></pre></div></div>
+
+<h2 id="-step-5-アプリケーションの実行">🏃 Step 5: アプリケーションの実行</h2>
+
+<h3 id="51-開発サーバーの起動">5.1 開発サーバーの起動</h3>
+
+<p>生成されたプロジェクトフォルダに移動して、開発サーバーを起動：</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># プロジェクトフォルダに移動</span>
+<span class="nb">cd </span>my-first-app
+
+<span class="c"># 開発サーバーを起動</span>
+npm start
+</code></pre></div></div>
+
+<h3 id="52-ブラウザで確認">5.2 ブラウザで確認</h3>
+
+<p>開発サーバーが起動したら、ブラウザが自動的に開きます。
+もし開かない場合は、以下のURLにアクセス：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>http://localhost:3000
+</code></pre></div></div>
+
+<p>🎉 <strong>おめでとうございます！</strong>
+あなたの最初のVibecoding アプリケーションが動作しています！</p>
+
+<h2 id="-次のステップ">📚 次のステップ</h2>
+
+<h3 id="機能の追加">機能の追加</h3>
+
+<p>要件を追加したい場合：</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>codex requirements <span class="nt">--add</span>
+</code></pre></div></div>
+
+<h3 id="コードの修正">コードの修正</h3>
+
+<p>生成されたコードを修正したい場合：</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>codex modify
+</code></pre></div></div>
+
+<h3 id="ヘルプの表示">ヘルプの表示</h3>
+
+<p>コマンドの使い方を確認：</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>codex <span class="nb">help</span>
+</code></pre></div></div>
+
+<h2 id="-よくある質問">🆘 よくある質問</h2>
+
+<h3 id="q-エラーが出て起動しない">Q: エラーが出て起動しない</h3>
+
+<p><strong>A:</strong> 以下を確認してください：</p>
+<ol>
+  <li>Node.jsが正しくインストールされているか</li>
+  <li>プロジェクトフォルダ内で<code class="language-plaintext highlighter-rouge">npm install</code>を実行</li>
+  <li>ポート3000が他のアプリで使われていないか</li>
+</ol>
+
+<h3 id="q-生成されたコードを編集したい">Q: 生成されたコードを編集したい</h3>
+
+<p><strong>A:</strong> お好みのエディタ（VS Code、Sublime Text など）で自由に編集できます。</p>
+
+<h3 id="q-要件定義をやり直したい">Q: 要件定義をやり直したい</h3>
+
+<p><strong>A:</strong> 以下のコマンドで要件を再定義できます：</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>codex requirements <span class="nt">--reset</span>
+</code></pre></div></div>
+
+<h2 id="-まとめ">🎓 まとめ</h2>
+
+<p>このガイドで学んだこと：</p>
+
+<p>✅ プロジェクトフォルダの作成方法
+✅ <code class="language-plaintext highlighter-rouge">/init</code> コマンドでのプロジェクト初期化
+✅ 対話型要件定義の進め方
+✅ 生成されたコードの実行方法</p>
+
+<p>これで、Vibecoding を使った開発の基本的な流れを理解できました！
+次は、より複雑なアプリケーションの開発に挑戦してみましょう。</p>
+
+<div class="success-box">
+  <h3>🚀 Vibecoding マスターへの第一歩</h3>
+  <p>基本を理解したら、さまざまなプロジェクトを作って練習しましょう。</p>
+  <p>作れば作るほど、要件定義のコツがつかめてきます！</p>
+</div>
+
+<style>
+.success-box {
+  background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%);
+  color: #2c3e50;
+  padding: 2rem;
+  border-radius: 10px;
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.success-box h3 {
+  margin-top: 0;
+  color: #2c3e50;
+}
+</style>
+

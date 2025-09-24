@@ -1,0 +1,254 @@
+<h1 id="-mac-セットアップガイド">🍎 Mac セットアップガイド</h1>
+
+<p>macOS環境でVibecoding開発環境を構築する手順を説明します。</p>
+
+<h2 id="️-step-1-homebrew-のインストール推奨">🛠️ Step 1: Homebrew のインストール（推奨）</h2>
+
+<p>Homebrewは、Macでソフトウェアを簡単にインストールできるパッケージマネージャーです。</p>
+
+<h3 id="11-homebrewのインストール">1.1 Homebrewのインストール</h3>
+
+<p>ターミナルを開いて以下のコマンドを実行：</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/bin/bash <span class="nt">-c</span> <span class="s2">"</span><span class="si">$(</span>curl <span class="nt">-fsSL</span> https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh<span class="si">)</span><span class="s2">"</span>
+</code></pre></div></div>
+
+<p>インストール中にパスワードを求められたら、Macのログインパスワードを入力してください。</p>
+
+<h3 id="12-インストールの確認">1.2 インストールの確認</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew <span class="nt">--version</span>
+</code></pre></div></div>
+
+<p>✅ バージョン番号が表示されれば成功です！</p>
+
+<h2 id="-step-2-nodejs-のインストール">📦 Step 2: Node.js のインストール</h2>
+
+<h3 id="方法a-homebrew-を使用推奨">方法A: Homebrew を使用（推奨）</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Node.jsとnpmをインストール</span>
+brew <span class="nb">install </span>node
+
+<span class="c"># インストール確認</span>
+node <span class="nt">--version</span>
+npm <span class="nt">--version</span>
+</code></pre></div></div>
+
+<h3 id="方法b-公式インストーラーを使用">方法B: 公式インストーラーを使用</h3>
+
+<ol>
+  <li><a href="https://nodejs.org/">Node.js 公式サイト</a> にアクセス</li>
+  <li><strong>「LTS」バージョン</strong>（推奨版）をクリック</li>
+  <li>macOS用の <code class="language-plaintext highlighter-rouge">.pkg</code> ファイルをダウンロード</li>
+  <li>ダウンロードしたファイルをダブルクリック</li>
+  <li>インストーラーの指示に従って進める</li>
+  <li>インストール完了</li>
+</ol>
+
+<h3 id="インストール確認">インストール確認</h3>
+
+<p>新しいターミナルウィンドウを開いて：</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>node <span class="nt">--version</span>
+npm <span class="nt">--version</span>
+</code></pre></div></div>
+
+<h2 id="-step-3-git-のインストールと設定">🔧 Step 3: Git のインストールと設定</h2>
+
+<h3 id="31-git-のインストール確認">3.1 Git のインストール確認</h3>
+
+<p>macOSには通常Gitがプリインストールされています：</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git <span class="nt">--version</span>
+</code></pre></div></div>
+
+<p>もしインストールされていない場合は、以下のいずれかの方法でインストール：</p>
+
+<h4 id="方法a-xcode-command-line-tools自動">方法A: Xcode Command Line Tools（自動）</h4>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git <span class="nt">--version</span>
+</code></pre></div></div>
+<p>このコマンドを実行すると、自動的にインストールダイアログが表示されます。</p>
+
+<h4 id="方法b-homebrew-を使用">方法B: Homebrew を使用</h4>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew <span class="nb">install </span>git
+</code></pre></div></div>
+
+<h3 id="32-git-の初期設定">3.2 Git の初期設定</h3>
+
+<p>ユーザー情報を設定します（自分の情報に置き換えてください）：</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git config <span class="nt">--global</span> user.name <span class="s2">"あなたの名前"</span>
+git config <span class="nt">--global</span> user.email <span class="s2">"your.email@example.com"</span>
+</code></pre></div></div>
+
+<p><strong>例：</strong></p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git config <span class="nt">--global</span> user.name <span class="s2">"Taro Yamada"</span>
+git config <span class="nt">--global</span> user.email <span class="s2">"taro@example.com"</span>
+</code></pre></div></div>
+
+<h3 id="33-設定の確認">3.3 設定の確認</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git config <span class="nt">--list</span>
+</code></pre></div></div>
+
+<h2 id="-step-4-vibecoding-cli-ツールのインストール">🚀 Step 4: Vibecoding CLI ツールのインストール</h2>
+
+<h3 id="41-gemini-cli-のインストール">4.1 gemini-cli のインストール</h3>
+
+<p>ターミナルで以下のコマンドを実行：</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm <span class="nb">install</span> <span class="nt">-g</span> @genkit-ai/cli
+</code></pre></div></div>
+
+<p>インストール確認：</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>genkit <span class="nt">--version</span>
+</code></pre></div></div>
+
+<h3 id="42-codex-cli-のインストール">4.2 codex-cli のインストール</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm <span class="nb">install</span> <span class="nt">-g</span> @vibecoding/codex-cli
+</code></pre></div></div>
+
+<p>インストール確認：</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>codex <span class="nt">--version</span>
+</code></pre></div></div>
+
+<blockquote>
+  <p>⚠️ <strong>権限エラーが出る場合の対処法</strong></p>
+</blockquote>
+
+<p>npmのグローバルインストールで権限エラーが出る場合：</p>
+
+<p><strong>解決方法1: npmのプレフィックスを変更</strong></p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># npmのディレクトリを作成</span>
+<span class="nb">mkdir</span> ~/.npm-global
+
+<span class="c"># npmの設定を変更</span>
+npm config <span class="nb">set </span>prefix <span class="s1">'~/.npm-global'</span>
+
+<span class="c"># パスを追加（zshの場合）</span>
+<span class="nb">echo</span> <span class="s1">'export PATH=~/.npm-global/bin:$PATH'</span> <span class="o">&gt;&gt;</span> ~/.zshrc
+<span class="nb">source</span> ~/.zshrc
+
+<span class="c"># bashの場合</span>
+<span class="nb">echo</span> <span class="s1">'export PATH=~/.npm-global/bin:$PATH'</span> <span class="o">&gt;&gt;</span> ~/.bash_profile
+<span class="nb">source</span> ~/.bash_profile
+</code></pre></div></div>
+
+<p>その後、再度インストールコマンドを実行してください。</p>
+
+<h2 id="-step-5-開発環境の最終確認">🎨 Step 5: 開発環境の最終確認</h2>
+
+<p>すべてのツールが正しくインストールされているか確認しましょう：</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Node.js の確認</span>
+node <span class="nt">--version</span>
+
+<span class="c"># npm の確認</span>
+npm <span class="nt">--version</span>
+
+<span class="c"># Git の確認</span>
+git <span class="nt">--version</span>
+
+<span class="c"># gemini-cli の確認</span>
+genkit <span class="nt">--version</span>
+
+<span class="c"># codex-cli の確認</span>
+codex <span class="nt">--version</span>
+</code></pre></div></div>
+
+<p>すべてのコマンドでバージョン番号が表示されれば、環境構築は完了です！</p>
+
+<h2 id="-トラブルシューティング">🆘 トラブルシューティング</h2>
+
+<h3 id="command-not-found-エラー">command not found エラー</h3>
+
+<p><strong>原因</strong>: パスが通っていない</p>
+
+<p><strong>解決方法</strong>:</p>
+<ol>
+  <li>シェルの設定ファイルを確認：
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">echo</span> <span class="nv">$SHELL</span>  <span class="c"># 使用中のシェルを確認</span>
+</code></pre></div>    </div>
+  </li>
+  <li>zshの場合：
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">echo</span> <span class="s1">'export PATH="/usr/local/bin:$PATH"'</span> <span class="o">&gt;&gt;</span> ~/.zshrc
+<span class="nb">source</span> ~/.zshrc
+</code></pre></div>    </div>
+  </li>
+  <li>bashの場合：
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">echo</span> <span class="s1">'export PATH="/usr/local/bin:$PATH"'</span> <span class="o">&gt;&gt;</span> ~/.bash_profile
+<span class="nb">source</span> ~/.bash_profile
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<h3 id="homebrew-の警告メッセージ">Homebrew の警告メッセージ</h3>
+
+<p><strong>解決方法</strong>:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Homebrewを最新版に更新</span>
+brew update
+
+<span class="c"># 問題を診断</span>
+brew doctor
+</code></pre></div></div>
+
+<p>診断結果に従って修正を行ってください。</p>
+
+<h3 id="macos-のセキュリティ警告">macOS のセキュリティ警告</h3>
+
+<p>「開発元が未確認のため開けません」というエラーが出る場合：</p>
+
+<p><strong>解決方法</strong>:</p>
+<ol>
+  <li>システム環境設定 → セキュリティとプライバシー</li>
+  <li>「一般」タブ</li>
+  <li>「このまま開く」をクリック</li>
+</ol>
+
+<h2 id="-セットアップ完了">✅ セットアップ完了！</h2>
+
+<p>おめでとうございます！Mac環境でのVibecoding開発環境の構築が完了しました。</p>
+
+<div class="next-step-box">
+  <h3>🎯 次のステップ</h3>
+  <p>環境構築が完了したら、最初のプロジェクトを作成してみましょう！</p>
+  <a href="/getting-started/first-project" class="start-button">
+    最初のプロジェクトを始める →
+  </a>
+</div>
+
+<style>
+.next-step-box {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.next-step-box h3 {
+  margin-top: 0;
+  font-size: 1.5rem;
+}
+
+.start-button {
+  display: inline-block;
+  background-color: white;
+  color: #667eea;
+  padding: 0.75rem 2rem;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 1rem;
+  transition: transform 0.3s;
+}
+
+.start-button:hover {
+  transform: translateY(-2px);
+}
+</style>
+
