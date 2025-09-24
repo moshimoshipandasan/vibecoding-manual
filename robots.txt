@@ -1,1 +1,1 @@
-Sitemap: /sitemap.xml
+Sitemap: https://moshimoshipandasan.github.io/vibecoding-manual/sitemap.xml

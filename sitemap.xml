@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>/getting-started/first-project/</loc>
+<loc>https://moshimoshipandasan.github.io/vibecoding-manual/getting-started/first-project/</loc>
 </url>
 <url>
-<loc>/</loc>
+<loc>https://moshimoshipandasan.github.io/vibecoding-manual/</loc>
 </url>
 <url>
-<loc>/getting-started/mac-setup/</loc>
+<loc>https://moshimoshipandasan.github.io/vibecoding-manual/getting-started/mac-setup/</loc>
 </url>
 <url>
-<loc>/getting-started/prerequisites/</loc>
+<loc>https://moshimoshipandasan.github.io/vibecoding-manual/getting-started/prerequisites/</loc>
 </url>
 <url>
-<loc>/getting-started/windows-setup/</loc>
+<loc>https://moshimoshipandasan.github.io/vibecoding-manual/getting-started/windows-setup/</loc>
 </url>
 </urlset>
