@@ -1,8 +1,9 @@
 ---
-layout: page
-title: 最初のプロジェクトを始める
+layout: default
+title: 最初のプロジェクト
 parent: 環境構築
 nav_order: 4
+permalink: /getting-started/first-project/
 ---
 
 # 🎯 最初のVibecoding プロジェクトを始める

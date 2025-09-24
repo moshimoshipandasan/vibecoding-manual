@@ -1,8 +1,9 @@
 ---
-layout: page
+layout: default
 title: 前提条件の確認
 parent: 環境構築
 nav_order: 1
+permalink: /getting-started/prerequisites/
 ---
 
 # 📋 前提条件の確認
