@@ -2,7 +2,7 @@
 layout: default
 title: Windows セットアップ
 parent: 環境構築
-nav_order: 2
+nav_order: 3
 permalink: /getting-started/windows-setup/
 ---
 

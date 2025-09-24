@@ -2,7 +2,7 @@
 layout: default
 title: Mac セットアップ
 parent: 環境構築
-nav_order: 3
+nav_order: 4
 permalink: /getting-started/mac-setup/
 ---
 
