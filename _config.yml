@@ -1,0 +1,54 @@
+# Jekyll設定
+title: Vibecoding スタートガイド
+description: プログラミング初心者のためのVibecoding入門マニュアル
+lang: ja
+
+# テーマ設定
+theme: jekyll-theme-minimal
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# ナビゲーション構造
+navigation:
+  - title: はじめに
+    url: /
+  - title: 環境構築
+    children:
+      - title: 前提条件の確認
+        url: /getting-started/prerequisites
+      - title: Windows セットアップ
+        url: /getting-started/windows-setup
+      - title: Mac セットアップ
+        url: /getting-started/mac-setup
+  - title: 最初のプロジェクト
+    url: /getting-started/first-project
+
+# Markdown設定
+markdown: kramdown
+kramdown:
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: 'highlight'
+    block:
+      line_numbers: false
+
+# SEO設定
+author: Vibecoding Documentation Team
+twitter:
+  card: summary
+social:
+  name: Vibecoding
+  links:
+    - https://github.com/your-username/vibecoding-manual
+
+# 出力設定
+permalink: pretty
+timezone: Asia/Tokyo
+
+# ビルド除外設定
+exclude:
+  - README.md
+  - .github/
+  - Gemfile
+  - Gemfile.lock
