@@ -16,7 +16,7 @@
 
     .site-nav > ul.nav-list:first-child > li > a,
     
-    .site-nav > ul.nav-list:first-child > li > ul > li:not(:nth-child(4)) > a,
+    .site-nav > ul.nav-list:first-child > li > ul > li:not(:nth-child(5)) > a,
     .site-nav > ul.nav-list:first-child > li > ul > li > ul > li a {
       background-image: none;
     }
@@ -26,14 +26,14 @@
       background-image: none;
     }
 
-    .site-nav > ul.nav-list:first-child > li:nth-child(2) > ul > li:nth-child(4) > a {
+    .site-nav > ul.nav-list:first-child > li:nth-child(2) > ul > li:nth-child(5) > a {
       font-weight: 600;
       text-decoration: none;
     }.site-nav > ul.nav-list:first-child > li:nth-child(2) > button svg,
-    .site-nav > ul.nav-list:first-child > li:nth-child(2) > ul > li:nth-child(4) > button svg {
+    .site-nav > ul.nav-list:first-child > li:nth-child(2) > ul > li:nth-child(5) > button svg {
       transform: rotate(-90deg);
     }.site-nav > ul.nav-list:first-child > li.nav-list-item:nth-child(2) > ul.nav-list,
-    .site-nav > ul.nav-list:first-child > li.nav-list-item:nth-child(2) > ul.nav-list > li.nav-list-item:nth-child(4) > ul.nav-list {
+    .site-nav > ul.nav-list:first-child > li.nav-list-item:nth-child(2) > ul.nav-list > li.nav-list-item:nth-child(5) > ul.nav-list {
       display: block;
     }
   </style>
@@ -160,7 +160,7 @@
   
     <ul class="nav-list"><li class="nav-list-item"><a href="/vibecoding-manual/" class="nav-list-link">ホーム</a></li><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="toggle items in 環境構築 category" aria-pressed="false">
         <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
-      </button><a href="/vibecoding-manual/getting-started/" class="nav-list-link">環境構築</a><ul class="nav-list"><li class="nav-list-item"><a href="/vibecoding-manual/getting-started/prerequisites/" class="nav-list-link">前提条件の確認</a></li><li class="nav-list-item"><a href="/vibecoding-manual/getting-started/windows-setup/" class="nav-list-link">Windows セットアップ</a></li><li class="nav-list-item"><a href="/vibecoding-manual/getting-started/mac-setup/" class="nav-list-link">Mac セットアップ</a></li><li class="nav-list-item"><a href="/vibecoding-manual/getting-started/first-project/" class="nav-list-link">最初のプロジェクト</a></li></ul></li></ul>
+      </button><a href="/vibecoding-manual/getting-started/" class="nav-list-link">環境構築</a><ul class="nav-list"><li class="nav-list-item"><a href="/vibecoding-manual/getting-started/prerequisites/" class="nav-list-link">前提条件の確認</a></li><li class="nav-list-item"><a href="/vibecoding-manual/getting-started/vscode-setup/" class="nav-list-link">VSCode セットアップ</a></li><li class="nav-list-item"><a href="/vibecoding-manual/getting-started/windows-setup/" class="nav-list-link">Windows セットアップ</a></li><li class="nav-list-item"><a href="/vibecoding-manual/getting-started/mac-setup/" class="nav-list-link">Mac セットアップ</a></li><li class="nav-list-item"><a href="/vibecoding-manual/getting-started/first-project/" class="nav-list-link">最初のプロジェクト</a></li></ul></li></ul>
   
 </nav>
 
@@ -221,454 +221,774 @@
       <div id="main-content" class="main-content">
         <main>
           
-            <h1 id="-最初のvibecoding-プロジェクトを始める">
+            <h1 class="no_toc" id="-vscodeで最初のプロジェクトを作成">
   
   
-    <a href="#-最初のvibecoding-プロジェクトを始める" class="anchor-heading" aria-labelledby="-最初のvibecoding-プロジェクトを始める"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 🎯 最初のVibecoding プロジェクトを始める
+    <a href="#-vscodeで最初のプロジェクトを作成" class="anchor-heading" aria-labelledby="-vscodeで最初のプロジェクトを作成"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 🎯 VSCodeで最初のプロジェクトを作成
   
   
 </h1>
     
 
-<p>環境構築が完了したら、いよいよVibecoding を使って最初のプロジェクトを作成しましょう！</p>
-<h2 id="-step-1-プロジェクトフォルダの作成">
+<p class="fs-6 fw-300">VSCodeを使って、Vibecodingプロジェクトを作成し、開発を始めましょう。</p>
+<h2 class="no_toc text-delta" id="目次">
   
   
-    <a href="#-step-1-プロジェクトフォルダの作成" class="anchor-heading" aria-labelledby="-step-1-プロジェクトフォルダの作成"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 📁 Step 1: プロジェクトフォルダの作成
+    <a href="#目次" class="anchor-heading" aria-labelledby="目次"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 目次
   
   
 </h2>
     
-<h3 id="11-作業ディレクトリを作成">
+
+<ol id="markdown-toc">
+  <li><a href="#-事前準備の確認" id="markdown-toc--事前準備の確認">📋 事前準備の確認</a></li>
+  <li><a href="#-step-1-プロジェクトフォルダの作成と準備" id="markdown-toc--step-1-プロジェクトフォルダの作成と準備">📁 Step 1: プロジェクトフォルダの作成と準備</a>    <ol>
+      <li><a href="#11-vscodeを起動" id="markdown-toc-11-vscodeを起動">1.1 VSCodeを起動</a></li>
+      <li><a href="#12-新しいフォルダをvscodeで開く" id="markdown-toc-12-新しいフォルダをvscodeで開く">1.2 新しいフォルダをVSCodeで開く</a>        <ol>
+          <li><a href="#方法a-vscodeから直接作成" id="markdown-toc-方法a-vscodeから直接作成">方法A: VSCodeから直接作成</a></li>
+          <li><a href="#方法b-エクスプローラーから開く" id="markdown-toc-方法b-エクスプローラーから開く">方法B: エクスプローラーから開く</a></li>
+        </ol>
+      </li>
+      <li><a href="#13-vscodeの画面構成を確認" id="markdown-toc-13-vscodeの画面構成を確認">1.3 VSCodeの画面構成を確認</a></li>
+    </ol>
+  </li>
+  <li><a href="#-step-2-vscode統合ターミナルの活用" id="markdown-toc--step-2-vscode統合ターミナルの活用">💻 Step 2: VSCode統合ターミナルの活用</a>    <ol>
+      <li><a href="#21-ターミナルを開く" id="markdown-toc-21-ターミナルを開く">2.1 ターミナルを開く</a></li>
+      <li><a href="#22-ターミナルの確認" id="markdown-toc-22-ターミナルの確認">2.2 ターミナルの確認</a></li>
+    </ol>
+  </li>
+  <li><a href="#-step-3-vibecodingプロジェクトの初期化" id="markdown-toc--step-3-vibecodingプロジェクトの初期化">🚀 Step 3: Vibecodingプロジェクトの初期化</a>    <ol>
+      <li><a href="#31-プロジェクトの初期化コマンド" id="markdown-toc-31-プロジェクトの初期化コマンド">3.1 プロジェクトの初期化コマンド</a></li>
+      <li><a href="#32-対話型セットアップ" id="markdown-toc-32-対話型セットアップ">3.2 対話型セットアップ</a></li>
+      <li><a href="#33-初期化の完了" id="markdown-toc-33-初期化の完了">3.3 初期化の完了</a></li>
+    </ol>
+  </li>
+  <li><a href="#-step-4-vscodeで要件定義" id="markdown-toc--step-4-vscodeで要件定義">📝 Step 4: VSCodeで要件定義</a>    <ol>
+      <li><a href="#41-要件定義の開始" id="markdown-toc-41-要件定義の開始">4.1 要件定義の開始</a></li>
+      <li><a href="#42-対話型要件定義" id="markdown-toc-42-対話型要件定義">4.2 対話型要件定義</a></li>
+      <li><a href="#43-要件定義の完了とコード生成" id="markdown-toc-43-要件定義の完了とコード生成">4.3 要件定義の完了とコード生成</a></li>
+    </ol>
+  </li>
+  <li><a href="#-step-5-vscodeでのコード確認と編集" id="markdown-toc--step-5-vscodeでのコード確認と編集">🎨 Step 5: VSCodeでのコード確認と編集</a>    <ol>
+      <li><a href="#51-生成されたファイルを開く" id="markdown-toc-51-生成されたファイルを開く">5.1 生成されたファイルを開く</a></li>
+      <li><a href="#52-コードの確認" id="markdown-toc-52-コードの確認">5.2 コードの確認</a></li>
+      <li><a href="#53-コードの編集" id="markdown-toc-53-コードの編集">5.3 コードの編集</a></li>
+    </ol>
+  </li>
+  <li><a href="#️-step-6-アプリケーションの実行" id="markdown-toc-️-step-6-アプリケーションの実行">▶️ Step 6: アプリケーションの実行</a>    <ol>
+      <li><a href="#61-依存関係のインストール" id="markdown-toc-61-依存関係のインストール">6.1 依存関係のインストール</a></li>
+      <li><a href="#62-開発サーバーの起動" id="markdown-toc-62-開発サーバーの起動">6.2 開発サーバーの起動</a></li>
+      <li><a href="#63-ブラウザでの確認" id="markdown-toc-63-ブラウザでの確認">6.3 ブラウザでの確認</a></li>
+      <li><a href="#64-ライブリロード" id="markdown-toc-64-ライブリロード">6.4 ライブリロード</a></li>
+    </ol>
+  </li>
+  <li><a href="#-step-7-vscodeのデバッグ機能" id="markdown-toc--step-7-vscodeのデバッグ機能">🐛 Step 7: VSCodeのデバッグ機能</a>    <ol>
+      <li><a href="#71-デバッグの設定" id="markdown-toc-71-デバッグの設定">7.1 デバッグの設定</a></li>
+      <li><a href="#72-ブレークポイントの設定" id="markdown-toc-72-ブレークポイントの設定">7.2 ブレークポイントの設定</a></li>
+      <li><a href="#73-デバッグ時の操作" id="markdown-toc-73-デバッグ時の操作">7.3 デバッグ時の操作</a></li>
+    </ol>
+  </li>
+  <li><a href="#-step-8-vscodeのgit統合" id="markdown-toc--step-8-vscodeのgit統合">🔀 Step 8: VSCodeのGit統合</a>    <ol>
+      <li><a href="#81-ソース管理を開く" id="markdown-toc-81-ソース管理を開く">8.1 ソース管理を開く</a></li>
+      <li><a href="#82-変更の確認" id="markdown-toc-82-変更の確認">8.2 変更の確認</a></li>
+      <li><a href="#83-コミット" id="markdown-toc-83-コミット">8.3 コミット</a></li>
+    </ol>
+  </li>
+  <li><a href="#-step-9-vscodeの便利な機能" id="markdown-toc--step-9-vscodeの便利な機能">📚 Step 9: VSCodeの便利な機能</a>    <ol>
+      <li><a href="#91-マルチカーソル" id="markdown-toc-91-マルチカーソル">9.1 マルチカーソル</a></li>
+      <li><a href="#92-エメットemmet" id="markdown-toc-92-エメットemmet">9.2 エメット（Emmet）</a></li>
+      <li><a href="#93-スニペット" id="markdown-toc-93-スニペット">9.3 スニペット</a></li>
+      <li><a href="#94-ファイル検索" id="markdown-toc-94-ファイル検索">9.4 ファイル検索</a></li>
+    </ol>
+  </li>
+  <li><a href="#-まとめ" id="markdown-toc--まとめ">🎯 まとめ</a></li>
+  <li><a href="#-トラブルシューティング" id="markdown-toc--トラブルシューティング">🆘 トラブルシューティング</a>    <ol>
+      <li><a href="#ターミナルが文字化けする" id="markdown-toc-ターミナルが文字化けする">ターミナルが文字化けする</a></li>
+      <li><a href="#npm-startでエラーが出る" id="markdown-toc-npm-startでエラーが出る">npm startでエラーが出る</a></li>
+      <li><a href="#ポート3000が使用中" id="markdown-toc-ポート3000が使用中">ポート3000が使用中</a></li>
+    </ol>
+  </li>
+  <li><a href="#-次のステップ" id="markdown-toc--次のステップ">🚀 次のステップ</a></li>
+</ol><hr />
+<h2 id="-事前準備の確認">
   
   
-    <a href="#11-作業ディレクトリを作成" class="anchor-heading" aria-labelledby="11-作業ディレクトリを作成"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.1 作業ディレクトリを作成
+    <a href="#-事前準備の確認" class="anchor-heading" aria-labelledby="-事前準備の確認"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 📋 事前準備の確認
+  
+  
+</h2>
+    
+
+<p>開始前に、以下が完了していることを確認してください：</p>
+
+<p>✅ Node.jsがインストール済み
+✅ Gitがインストール済み
+✅ VSCodeがインストール済み
+✅ VSCode拡張機能がインストール済み
+✅ gemini-cliとcodex-cliがインストール済み</p>
+<h2 id="-step-1-プロジェクトフォルダの作成と準備">
+  
+  
+    <a href="#-step-1-プロジェクトフォルダの作成と準備" class="anchor-heading" aria-labelledby="-step-1-プロジェクトフォルダの作成と準備"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 📁 Step 1: プロジェクトフォルダの作成と準備
+  
+  
+</h2>
+    
+<h3 id="11-vscodeを起動">
+  
+  
+    <a href="#11-vscodeを起動" class="anchor-heading" aria-labelledby="11-vscodeを起動"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.1 VSCodeを起動
   
   
 </h3>
     
 
-<p>まず、プロジェクト用のフォルダを作成します。</p>
+<ol>
+  <li><strong>Windows</strong>: スタートメニューから「Visual Studio Code」を選択</li>
+  <li><strong>Mac</strong>: LaunchpadまたはApplicationsから「Visual Studio Code」を選択</li>
+</ol>
+<h3 id="12-新しいフォルダをvscodeで開く">
+  
+  
+    <a href="#12-新しいフォルダをvscodeで開く" class="anchor-heading" aria-labelledby="12-新しいフォルダをvscodeで開く"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.2 新しいフォルダをVSCodeで開く
+  
+  
+</h3>
+    
+<h4 id="方法a-vscodeから直接作成">
+  
+  
+    <a href="#方法a-vscodeから直接作成" class="anchor-heading" aria-labelledby="方法a-vscodeから直接作成"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 方法A: VSCodeから直接作成
+  
+  
+</h4>
+    
 
-<p><strong>Windows (PowerShell):</strong></p>
-<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># ドキュメントフォルダに移動</span><span class="w">
-</span><span class="n">cd</span><span class="w"> </span><span class="nx">~/Documents</span><span class="w">
+<ol>
+  <li>VSCodeのメニューバーから：
+    <ul>
+      <li><strong>ファイル</strong> → <strong>フォルダーを開く</strong>（Windows）</li>
+      <li><strong>File</strong> → <strong>Open Folder</strong>（Mac）</li>
+    </ul>
+  </li>
+  <li>任意の場所（例：ドキュメントフォルダ）を選択</li>
+  <li><strong>新しいフォルダー</strong>ボタンをクリック</li>
+  <li>フォルダ名を入力：<code class="language-plaintext highlighter-rouge">my-vibecoding-project</code></li>
+  <li><strong>フォルダーの選択</strong>をクリック</li>
+</ol>
+<h4 id="方法b-エクスプローラーから開く">
+  
+  
+    <a href="#方法b-エクスプローラーから開く" class="anchor-heading" aria-labelledby="方法b-エクスプローラーから開く"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 方法B: エクスプローラーから開く
+  
+  
+</h4>
+    
 
-</span><span class="c"># プロジェクト用フォルダを作成</span><span class="w">
-</span><span class="n">mkdir</span><span class="w"> </span><span class="nx">MyVibecodingProjects</span><span class="w">
+<ol>
+  <li>エクスプローラー（Windows）またはFinder（Mac）で新規フォルダを作成</li>
+  <li>フォルダを右クリック</li>
+  <li><strong>「Codeで開く」</strong>を選択（VSCodeインストール時に追加されたメニュー）</li>
+</ol>
+<h3 id="13-vscodeの画面構成を確認">
+  
+  
+    <a href="#13-vscodeの画面構成を確認" class="anchor-heading" aria-labelledby="13-vscodeの画面構成を確認"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 1.3 VSCodeの画面構成を確認
+  
+  
+</h3>
+    
 
-</span><span class="c"># 作成したフォルダに移動</span><span class="w">
-</span><span class="n">cd</span><span class="w"> </span><span class="nx">MyVibecodingProjects</span><span class="w">
-</span></code></pre></div></div>
+<p>開いたVSCodeの画面には以下の要素があります：</p>
 
-<p><strong>Mac (ターミナル):</strong></p>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># ホームディレクトリに移動</span>
-<span class="nb">cd</span> ~
-
-<span class="c"># プロジェクト用フォルダを作成</span>
-<span class="nb">mkdir </span>MyVibecodingProjects
-
-<span class="c"># 作成したフォルダに移動</span>
-<span class="nb">cd </span>MyVibecodingProjects
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>┌─────────────────────────────────────────────┐
+│  メニューバー（ファイル、編集、表示...）         │
+├────┬────────────────────────────────────────┤
+│    │                                        │
+│ サ │          エディタエリア                   │
+│ イ │      （ファイルの編集画面）               │
+│ ド │                                        │
+│ バ │                                        │
+│ ｜ │────────────────────────────────────────│
+│    │      ターミナル（コマンド実行）           │
+└────┴────────────────────────────────────────┘
 </code></pre></div></div>
-<h2 id="-step-2-vibecoding-プロジェクトの初期化">
+<h2 id="-step-2-vscode統合ターミナルの活用">
   
   
-    <a href="#-step-2-vibecoding-プロジェクトの初期化" class="anchor-heading" aria-labelledby="-step-2-vibecoding-プロジェクトの初期化"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 🚀 Step 2: Vibecoding プロジェクトの初期化
+    <a href="#-step-2-vscode統合ターミナルの活用" class="anchor-heading" aria-labelledby="-step-2-vscode統合ターミナルの活用"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 💻 Step 2: VSCode統合ターミナルの活用
   
   
 </h2>
     
-<h3 id="21-init-コマンドの実行">
+<h3 id="21-ターミナルを開く">
   
   
-    <a href="#21-init-コマンドの実行" class="anchor-heading" aria-labelledby="21-init-コマンドの実行"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.1 <code class="language-plaintext highlighter-rouge">/init</code> コマンドの実行
+    <a href="#21-ターミナルを開く" class="anchor-heading" aria-labelledby="21-ターミナルを開く"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.1 ターミナルを開く
   
   
 </h3>
     
 
-<p>プロジェクトフォルダ内で以下のコマンドを実行します：</p>
+<p>以下のいずれかの方法でターミナルを開きます：</p>
+
+<ol>
+  <li><strong>ショートカット</strong>: <code class="language-plaintext highlighter-rouge">Ctrl+`</code>（Windows）/ <code class="language-plaintext highlighter-rouge">Cmd+`</code>（Mac）</li>
+  <li><strong>メニュー</strong>: <strong>表示</strong> → <strong>ターミナル</strong></li>
+  <li><strong>上部メニュー</strong>: <strong>Terminal</strong> → <strong>New Terminal</strong></li>
+</ol>
+<h3 id="22-ターミナルの確認">
+  
+  
+    <a href="#22-ターミナルの確認" class="anchor-heading" aria-labelledby="22-ターミナルの確認"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.2 ターミナルの確認
+  
+  
+</h3>
+    
+
+<p>ターミナルが開いたら、現在のディレクトリが正しいか確認：</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 現在のディレクトリを確認</span>
+<span class="nb">pwd</span>
+</code></pre></div></div>
+
+<p>出力例：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>C:\Users\YourName\Documents\my-vibecoding-project  # Windows
+/Users/YourName/Documents/my-vibecoding-project     # Mac
+</code></pre></div></div>
+<h2 id="-step-3-vibecodingプロジェクトの初期化">
+  
+  
+    <a href="#-step-3-vibecodingプロジェクトの初期化" class="anchor-heading" aria-labelledby="-step-3-vibecodingプロジェクトの初期化"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 🚀 Step 3: Vibecodingプロジェクトの初期化
+  
+  
+</h2>
+    
+<h3 id="31-プロジェクトの初期化コマンド">
+  
+  
+    <a href="#31-プロジェクトの初期化コマンド" class="anchor-heading" aria-labelledby="31-プロジェクトの初期化コマンド"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 3.1 プロジェクトの初期化コマンド
+  
+  
+</h3>
+    
+
+<p>VSCodeのターミナルで以下を実行：</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>codex /init
 </code></pre></div></div>
-
-<p>このコマンドを実行すると、対話型のセットアップが始まります。</p>
-<h3 id="22-プロジェクト情報の入力">
+<h3 id="32-対話型セットアップ">
   
   
-    <a href="#22-プロジェクト情報の入力" class="anchor-heading" aria-labelledby="22-プロジェクト情報の入力"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 2.2 プロジェクト情報の入力
+    <a href="#32-対話型セットアップ" class="anchor-heading" aria-labelledby="32-対話型セットアップ"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 3.2 対話型セットアップ
   
   
 </h3>
     
 
-<p>セットアップ中に以下の質問が表示されます：</p>
+<p>ターミナル内で対話型のセットアップが始まります：</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>? プロジェクト名を入力してください: my-first-app
-? プロジェクトの説明を入力してください: 私の最初のVibecoding アプリケーション
-? 使用するフレームワークを選択してください: (Use arrow keys)
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>? プロジェクト名を入力してください: my-first-app
+? プロジェクトの説明を入力してください: VSCodeで作る最初のVibecodingアプリ
+? 使用するフレームワークを選択してください:
   ❯ React
     Vue
     Angular
-    Node.js (バックエンド)
+    Node.js <span class="o">(</span>バックエンド<span class="o">)</span>
     その他
 </code></pre></div></div>
 
-<p>矢印キーで選択して、Enterキーで決定します。</p>
-<h2 id="-step-3-要件定義を始める">
+<p><strong>入力のヒント</strong>：</p>
+<ul>
+  <li>矢印キー（↑↓）で選択</li>
+  <li>Enterで決定</li>
+  <li>日本語入力も可能</li>
+</ul>
+<h3 id="33-初期化の完了">
   
   
-    <a href="#-step-3-要件定義を始める" class="anchor-heading" aria-labelledby="-step-3-要件定義を始める"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 📝 Step 3: 要件定義を始める
-  
-  
-</h2>
-    
-<h3 id="31-要件定義モードの開始">
-  
-  
-    <a href="#31-要件定義モードの開始" class="anchor-heading" aria-labelledby="31-要件定義モードの開始"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 3.1 要件定義モードの開始
+    <a href="#33-初期化の完了" class="anchor-heading" aria-labelledby="33-初期化の完了"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 3.3 初期化の完了
   
   
 </h3>
     
 
-<p>プロジェクトの初期化が完了したら、要件定義を開始します：</p>
+<p>初期化が完了すると、左側のエクスプローラーに新しいファイルが表示されます：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>my-vibecoding-project/
+├── 📄 package.json
+├── 📄 .gitignore
+├── 📁 src/
+└── 📄 README.md
+</code></pre></div></div>
+<h2 id="-step-4-vscodeで要件定義">
+  
+  
+    <a href="#-step-4-vscodeで要件定義" class="anchor-heading" aria-labelledby="-step-4-vscodeで要件定義"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 📝 Step 4: VSCodeで要件定義
+  
+  
+</h2>
+    
+<h3 id="41-要件定義の開始">
+  
+  
+    <a href="#41-要件定義の開始" class="anchor-heading" aria-labelledby="41-要件定義の開始"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 4.1 要件定義の開始
+  
+  
+</h3>
+    
+
+<p>ターミナルで以下のコマンドを実行：</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>codex requirements
 </code></pre></div></div>
-<h3 id="32-対話型要件定義の流れ">
+<h3 id="42-対話型要件定義">
   
   
-    <a href="#32-対話型要件定義の流れ" class="anchor-heading" aria-labelledby="32-対話型要件定義の流れ"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 3.2 対話型要件定義の流れ
+    <a href="#42-対話型要件定義" class="anchor-heading" aria-labelledby="42-対話型要件定義"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 4.2 対話型要件定義
   
   
 </h3>
     
 
-<p>Vibecoding のAIアシスタントが、プロジェクトの要件について質問してきます。</p>
+<p>AIアシスタントとの対話がターミナル内で進行します：</p>
 
-<p><strong>例：TODOリストアプリを作る場合</strong></p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>AI: どのようなアプリケーションを作成しますか？
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>AI: どのようなアプリケーションを作成しますか？
+あなた: タスク管理アプリを作りたいです
 
-あなた: TODOリストを管理できるウェブアプリケーションを作りたいです
+AI: タスク管理アプリですね。以下の機能について確認します：
+    1. タスクの追加・削除
+    2. タスクの完了マーク
+    3. 優先度設定
+    4. カテゴリ分け
 
-AI: 了解しました。TODOリストアプリですね。
-    以下の機能について確認させてください：
+    必要な機能を教えてください。
 
-    1. タスクの追加・削除機能は必要ですか？
-    2. タスクの完了/未完了の管理は必要ですか？
-    3. カテゴリ分けは必要ですか？
-    4. 期限の設定は必要ですか？
-
-あなた: 1と2は必要です。カテゴリ分けと期限設定は今回は不要です。
-
-AI: 承知しました。それでは以下の仕様で進めます：
-    - ✅ タスクの追加機能
-    - ✅ タスクの削除機能
-    - ✅ 完了/未完了の状態管理
-    - ❌ カテゴリ機能（実装しない）
-    - ❌ 期限設定機能（実装しない）
-
-    この内容でよろしいですか？(yes/no)
-
-あなた: yes
+あなた: 1と2だけで、シンプルに作りたいです
 </code></pre></div></div>
-<h3 id="33-要件定義のコツ">
+<h3 id="43-要件定義の完了とコード生成">
   
   
-    <a href="#33-要件定義のコツ" class="anchor-heading" aria-labelledby="33-要件定義のコツ"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 3.3 要件定義のコツ
-  
-  
-</h3>
-    
-<h4 id="-明確に伝える">
-  
-  
-    <a href="#-明確に伝える" class="anchor-heading" aria-labelledby="-明確に伝える"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 🎯 明確に伝える
-  
-  
-</h4>
-    
-
-<p><strong>良い例：</strong></p>
-<ul>
-  <li>「ユーザーがログインできる機能が必要です」</li>
-  <li>「商品を検索して、カートに追加できるようにしたい」</li>
-  <li>「管理者だけが記事を編集できるようにしたい」</li>
-</ul>
-
-<p><strong>避けるべき例：</strong></p>
-<ul>
-  <li>「いい感じのアプリ」</li>
-  <li>「使いやすくしてください」</li>
-</ul>
-<h4 id="-段階的に進める">
-  
-  
-    <a href="#-段階的に進める" class="anchor-heading" aria-labelledby="-段階的に進める"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 📊 段階的に進める
-  
-  
-</h4>
-    
-
-<p>最初はシンプルな機能から始めて、後から機能を追加していくことができます。</p>
-
-<p><strong>推奨アプローチ：</strong></p>
-<ol>
-  <li><strong>MVP（最小限の機能）を最初に定義</strong>
-    <ul>
-      <li>基本機能だけでスタート</li>
-    </ul>
-  </li>
-  <li><strong>動作確認後に機能追加</strong>
-    <ul>
-      <li>基本が動いてから拡張</li>
-    </ul>
-  </li>
-</ol>
-<h4 id="-わからないことは質問する">
-  
-  
-    <a href="#-わからないことは質問する" class="anchor-heading" aria-labelledby="-わからないことは質問する"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 💡 わからないことは質問する
-  
-  
-</h4>
-    
-
-<p>AIアシスタントに質問することもできます：</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>あなた: ユーザー認証とは何ですか？
-
-AI: ユーザー認証は、アプリケーションを使う人が
-    誰なのかを確認する仕組みです。
-    例えば：
-    - ログイン/ログアウト機能
-    - パスワードによる本人確認
-    - 会員登録機能
-    などが含まれます。必要ですか？
-</code></pre></div></div>
-<h2 id="-step-4-コード生成">
-  
-  
-    <a href="#-step-4-コード生成" class="anchor-heading" aria-labelledby="-step-4-コード生成"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 🎨 Step 4: コード生成
-  
-  
-</h2>
-    
-<h3 id="41-要件定義完了後の自動生成">
-  
-  
-    <a href="#41-要件定義完了後の自動生成" class="anchor-heading" aria-labelledby="41-要件定義完了後の自動生成"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 4.1 要件定義完了後の自動生成
+    <a href="#43-要件定義の完了とコード生成" class="anchor-heading" aria-labelledby="43-要件定義の完了とコード生成"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 4.3 要件定義の完了とコード生成
   
   
 </h3>
     
 
-<p>要件定義が完了すると、Vibecoding が自動的にコードを生成します：</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>要件定義が完了しました。
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>要件定義が完了しました。
 コードを生成中...
 
-✅ プロジェクト構造を作成しました
-✅ 必要なファイルを生成しました
-✅ 依存関係をインストールしました
+✅ src/App.js を生成しました
+✅ src/components/TaskList.js を生成しました
+✅ src/components/TaskItem.js を生成しました
+✅ package.json を更新しました
 
 生成が完了しました！
 </code></pre></div></div>
-<h3 id="42-生成されたファイルの確認">
+<h2 id="-step-5-vscodeでのコード確認と編集">
   
   
-    <a href="#42-生成されたファイルの確認" class="anchor-heading" aria-labelledby="42-生成されたファイルの確認"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 4.2 生成されたファイルの確認
-  
-  
-</h3>
-    
-
-<p>生成されたプロジェクト構造を確認：</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># ファイル一覧を表示</span>
-<span class="nb">ls</span> <span class="nt">-la</span>  <span class="c"># Mac/Linux</span>
-<span class="nb">dir</span>     <span class="c"># Windows</span>
-</code></pre></div></div>
-
-<p>典型的な構造：</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>my-first-app/
-├── src/           # ソースコード
-├── public/        # 公開ファイル
-├── package.json   # プロジェクト設定
-├── README.md      # プロジェクト説明
-└── .gitignore     # Git除外設定
-</code></pre></div></div>
-<h2 id="-step-5-アプリケーションの実行">
-  
-  
-    <a href="#-step-5-アプリケーションの実行" class="anchor-heading" aria-labelledby="-step-5-アプリケーションの実行"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 🏃 Step 5: アプリケーションの実行
+    <a href="#-step-5-vscodeでのコード確認と編集" class="anchor-heading" aria-labelledby="-step-5-vscodeでのコード確認と編集"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 🎨 Step 5: VSCodeでのコード確認と編集
   
   
 </h2>
     
-<h3 id="51-開発サーバーの起動">
+<h3 id="51-生成されたファイルを開く">
   
   
-    <a href="#51-開発サーバーの起動" class="anchor-heading" aria-labelledby="51-開発サーバーの起動"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 5.1 開発サーバーの起動
-  
-  
-</h3>
-    
-
-<p>生成されたプロジェクトフォルダに移動して、開発サーバーを起動：</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># プロジェクトフォルダに移動</span>
-<span class="nb">cd </span>my-first-app
-
-<span class="c"># 開発サーバーを起動</span>
-npm start
-</code></pre></div></div>
-<h3 id="52-ブラウザで確認">
-  
-  
-    <a href="#52-ブラウザで確認" class="anchor-heading" aria-labelledby="52-ブラウザで確認"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 5.2 ブラウザで確認
+    <a href="#51-生成されたファイルを開く" class="anchor-heading" aria-labelledby="51-生成されたファイルを開く"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 5.1 生成されたファイルを開く
   
   
 </h3>
     
 
-<p>開発サーバーが起動したら、ブラウザが自動的に開きます。
-もし開かない場合は、以下のURLにアクセス：</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>http://localhost:3000
-</code></pre></div></div>
-
-<p>🎉 <strong>おめでとうございます！</strong>
-あなたの最初のVibecoding アプリケーションが動作しています！</p>
-<h2 id="-次のステップ">
-  
-  
-    <a href="#-次のステップ" class="anchor-heading" aria-labelledby="-次のステップ"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 📚 次のステップ
-  
-  
-</h2>
-    
-<h3 id="機能の追加">
-  
-  
-    <a href="#機能の追加" class="anchor-heading" aria-labelledby="機能の追加"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 機能の追加
-  
-  
-</h3>
-    
-
-<p>要件を追加したい場合：</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>codex requirements <span class="nt">--add</span>
-</code></pre></div></div>
-<h3 id="コードの修正">
-  
-  
-    <a href="#コードの修正" class="anchor-heading" aria-labelledby="コードの修正"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> コードの修正
-  
-  
-</h3>
-    
-
-<p>生成されたコードを修正したい場合：</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>codex modify
-</code></pre></div></div>
-<h3 id="ヘルプの表示">
-  
-  
-    <a href="#ヘルプの表示" class="anchor-heading" aria-labelledby="ヘルプの表示"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> ヘルプの表示
-  
-  
-</h3>
-    
-
-<p>コマンドの使い方を確認：</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>codex <span class="nb">help</span>
-</code></pre></div></div>
-<h2 id="-よくある質問">
-  
-  
-    <a href="#-よくある質問" class="anchor-heading" aria-labelledby="-よくある質問"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 🆘 よくある質問
-  
-  
-</h2>
-    
-<h3 id="q-エラーが出て起動しない">
-  
-  
-    <a href="#q-エラーが出て起動しない" class="anchor-heading" aria-labelledby="q-エラーが出て起動しない"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Q: エラーが出て起動しない
-  
-  
-</h3>
-    
-
-<p><strong>A:</strong> 以下を確認してください：</p>
 <ol>
-  <li>Node.jsが正しくインストールされているか</li>
-  <li>プロジェクトフォルダ内で<code class="language-plaintext highlighter-rouge">npm install</code>を実行</li>
-  <li>ポート3000が他のアプリで使われていないか</li>
+  <li><strong>エクスプローラーパネル</strong>（左サイドバー）でファイルをクリック</li>
+  <li>または <code class="language-plaintext highlighter-rouge">Ctrl+P</code>（Mac: <code class="language-plaintext highlighter-rouge">Cmd+P</code>）でファイル名を入力して開く</li>
 </ol>
-<h3 id="q-生成されたコードを編集したい">
+<h3 id="52-コードの確認">
   
   
-    <a href="#q-生成されたコードを編集したい" class="anchor-heading" aria-labelledby="q-生成されたコードを編集したい"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Q: 生成されたコードを編集したい
-  
-  
-</h3>
-    
-
-<p><strong>A:</strong> お好みのエディタ（VS Code、Sublime Text など）で自由に編集できます。</p>
-<h3 id="q-要件定義をやり直したい">
-  
-  
-    <a href="#q-要件定義をやり直したい" class="anchor-heading" aria-labelledby="q-要件定義をやり直したい"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Q: 要件定義をやり直したい
+    <a href="#52-コードの確認" class="anchor-heading" aria-labelledby="52-コードの確認"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 5.2 コードの確認
   
   
 </h3>
     
 
-<p><strong>A:</strong> 以下のコマンドで要件を再定義できます：</p>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>codex requirements <span class="nt">--reset</span>
+<p>生成されたコードがエディタに表示されます。VSCodeの機能：</p>
+
+<ul>
+  <li><strong>シンタックスハイライト</strong>: コードが色分けされて見やすい</li>
+  <li><strong>IntelliSense</strong>: 自動補完が効く（<code class="language-plaintext highlighter-rouge">.</code>を打つと候補が出る）</li>
+  <li><strong>エラー表示</strong>: 問題があれば赤い波線で表示</li>
+  <li><strong>ホバー情報</strong>: 変数や関数にマウスを乗せると説明が表示</li>
+</ul>
+<h3 id="53-コードの編集">
+  
+  
+    <a href="#53-コードの編集" class="anchor-heading" aria-labelledby="53-コードの編集"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 5.3 コードの編集
+  
+  
+</h3>
+    
+
+<p>必要に応じてコードを編集：</p>
+
+<ol>
+  <li>編集したい箇所をクリック</li>
+  <li>入力または削除</li>
+  <li><code class="language-plaintext highlighter-rouge">Ctrl+S</code>（Mac: <code class="language-plaintext highlighter-rouge">Cmd+S</code>）で保存</li>
+  <li><strong>自動フォーマット</strong>: Prettierが自動で整形</li>
+</ol>
+<h2 id="️-step-6-アプリケーションの実行">
+  
+  
+    <a href="#️-step-6-アプリケーションの実行" class="anchor-heading" aria-labelledby="️-step-6-アプリケーションの実行"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> ▶️ Step 6: アプリケーションの実行
+  
+  
+</h2>
+    
+<h3 id="61-依存関係のインストール">
+  
+  
+    <a href="#61-依存関係のインストール" class="anchor-heading" aria-labelledby="61-依存関係のインストール"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 6.1 依存関係のインストール
+  
+  
+</h3>
+    
+
+<p>ターミナルで実行：</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm <span class="nb">install</span>
 </code></pre></div></div>
+
+<p>進捗がターミナルに表示されます：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>added 234 packages, and audited 235 packages in 15s
+found 0 vulnerabilities
+</code></pre></div></div>
+<h3 id="62-開発サーバーの起動">
+  
+  
+    <a href="#62-開発サーバーの起動" class="anchor-heading" aria-labelledby="62-開発サーバーの起動"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 6.2 開発サーバーの起動
+  
+  
+</h3>
+    
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm start
+</code></pre></div></div>
+<h3 id="63-ブラウザでの確認">
+  
+  
+    <a href="#63-ブラウザでの確認" class="anchor-heading" aria-labelledby="63-ブラウザでの確認"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 6.3 ブラウザでの確認
+  
+  
+</h3>
+    
+
+<p>起動メッセージ：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Compiled successfully!
+
+You can now view my-first-app in the browser.
+
+  Local:            http://localhost:3000
+  On Your Network:  http://192.168.1.5:3000
+
+Note that the development build is not optimized.
+To create a production build, use npm run build.
+</code></pre></div></div>
+
+<ul>
+  <li>ブラウザが自動的に開きます</li>
+  <li>開かない場合は <code class="language-plaintext highlighter-rouge">http://localhost:3000</code> にアクセス</li>
+</ul>
+<h3 id="64-ライブリロード">
+  
+  
+    <a href="#64-ライブリロード" class="anchor-heading" aria-labelledby="64-ライブリロード"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 6.4 ライブリロード
+  
+  
+</h3>
+    
+
+<p>VSCodeでコードを編集して保存すると：</p>
+<ol>
+  <li>自動的にコンパイル</li>
+  <li>ブラウザが自動更新</li>
+  <li>変更が即座に反映</li>
+</ol>
+<h2 id="-step-7-vscodeのデバッグ機能">
+  
+  
+    <a href="#-step-7-vscodeのデバッグ機能" class="anchor-heading" aria-labelledby="-step-7-vscodeのデバッグ機能"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 🐛 Step 7: VSCodeのデバッグ機能
+  
+  
+</h2>
+    
+<h3 id="71-デバッグの設定">
+  
+  
+    <a href="#71-デバッグの設定" class="anchor-heading" aria-labelledby="71-デバッグの設定"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 7.1 デバッグの設定
+  
+  
+</h3>
+    
+
+<ol>
+  <li>左サイドバーの<strong>デバッグアイコン</strong>をクリック（虫のアイコン）</li>
+  <li><strong>「launch.jsonファイルを作成します」</strong>をクリック</li>
+  <li><strong>「Chrome」</strong>を選択</li>
+  <li>自動的に<code class="language-plaintext highlighter-rouge">.vscode/launch.json</code>が作成される</li>
+</ol>
+<h3 id="72-ブレークポイントの設定">
+  
+  
+    <a href="#72-ブレークポイントの設定" class="anchor-heading" aria-labelledby="72-ブレークポイントの設定"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 7.2 ブレークポイントの設定
+  
+  
+</h3>
+    
+
+<ol>
+  <li>コードの行番号の左側をクリック</li>
+  <li>赤い点（ブレークポイント）が表示される</li>
+  <li>F5キーでデバッグ開始</li>
+  <li>ブレークポイントで実行が停止</li>
+</ol>
+<h3 id="73-デバッグ時の操作">
+  
+  
+    <a href="#73-デバッグ時の操作" class="anchor-heading" aria-labelledby="73-デバッグ時の操作"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 7.3 デバッグ時の操作
+  
+  
+</h3>
+    
+
+<ul>
+  <li><strong>F10</strong>: ステップオーバー（次の行へ）</li>
+  <li><strong>F11</strong>: ステップイン（関数の中へ）</li>
+  <li><strong>Shift+F11</strong>: ステップアウト（関数から出る）</li>
+  <li><strong>F5</strong>: 続行</li>
+</ul>
+<h2 id="-step-8-vscodeのgit統合">
+  
+  
+    <a href="#-step-8-vscodeのgit統合" class="anchor-heading" aria-labelledby="-step-8-vscodeのgit統合"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 🔀 Step 8: VSCodeのGit統合
+  
+  
+</h2>
+    
+<h3 id="81-ソース管理を開く">
+  
+  
+    <a href="#81-ソース管理を開く" class="anchor-heading" aria-labelledby="81-ソース管理を開く"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 8.1 ソース管理を開く
+  
+  
+</h3>
+    
+
+<ol>
+  <li>左サイドバーの<strong>ソース管理アイコン</strong>をクリック（分岐アイコン）</li>
+  <li>または <code class="language-plaintext highlighter-rouge">Ctrl+Shift+G</code>（Mac: <code class="language-plaintext highlighter-rouge">Cmd+Shift+G</code>）</li>
+</ol>
+<h3 id="82-変更の確認">
+  
+  
+    <a href="#82-変更の確認" class="anchor-heading" aria-labelledby="82-変更の確認"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 8.2 変更の確認
+  
+  
+</h3>
+    
+
+<ul>
+  <li><strong>変更</strong>タブに編集したファイルが表示</li>
+  <li>ファイルをクリックで差分表示</li>
+  <li>緑：追加された行</li>
+  <li>赤：削除された行</li>
+</ul>
+<h3 id="83-コミット">
+  
+  
+    <a href="#83-コミット" class="anchor-heading" aria-labelledby="83-コミット"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 8.3 コミット
+  
+  
+</h3>
+    
+
+<ol>
+  <li>変更したいファイルの「+」をクリック（ステージング）</li>
+  <li>コミットメッセージを入力</li>
+  <li>✓（チェックマーク）をクリックしてコミット</li>
+</ol>
+<h2 id="-step-9-vscodeの便利な機能">
+  
+  
+    <a href="#-step-9-vscodeの便利な機能" class="anchor-heading" aria-labelledby="-step-9-vscodeの便利な機能"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 📚 Step 9: VSCodeの便利な機能
+  
+  
+</h2>
+    
+<h3 id="91-マルチカーソル">
+  
+  
+    <a href="#91-マルチカーソル" class="anchor-heading" aria-labelledby="91-マルチカーソル"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 9.1 マルチカーソル
+  
+  
+</h3>
+    
+
+<ul>
+  <li><strong>Alt+クリック</strong>（Mac: Option+クリック）: 複数箇所を同時編集</li>
+  <li><strong>Ctrl+D</strong>（Mac: Cmd+D）: 同じ単語を順次選択</li>
+</ul>
+<h3 id="92-エメットemmet">
+  
+  
+    <a href="#92-エメットemmet" class="anchor-heading" aria-labelledby="92-エメットemmet"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 9.2 エメット（Emmet）
+  
+  
+</h3>
+    
+
+<p>HTMLを素早く記述：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>div.container&gt;ul&gt;li*3
+</code></pre></div></div>
+<p>Tabキーで展開：</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;ul&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+<h3 id="93-スニペット">
+  
+  
+    <a href="#93-スニペット" class="anchor-heading" aria-labelledby="93-スニペット"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 9.3 スニペット
+  
+  
+</h3>
+    
+
+<p><code class="language-plaintext highlighter-rouge">rfc</code> + Tabで React Functional Component のテンプレートが展開</p>
+<h3 id="94-ファイル検索">
+  
+  
+    <a href="#94-ファイル検索" class="anchor-heading" aria-labelledby="94-ファイル検索"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 9.4 ファイル検索
+  
+  
+</h3>
+    
+
+<ul>
+  <li><strong>Ctrl+P</strong>（Mac: Cmd+P）: ファイル名で検索</li>
+  <li><strong>Ctrl+Shift+F</strong>（Mac: Cmd+Shift+F）: プロジェクト全体を検索</li>
+</ul>
 <h2 id="-まとめ">
   
   
-    <a href="#-まとめ" class="anchor-heading" aria-labelledby="-まとめ"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 🎓 まとめ
+    <a href="#-まとめ" class="anchor-heading" aria-labelledby="-まとめ"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 🎯 まとめ
   
   
 </h2>
     
 
-<p>このガイドで学んだこと：</p>
+<p>VSCodeを使ったVibecodingプロジェクトの基本的な流れ：</p>
 
-<p>✅ プロジェクトフォルダの作成方法
-✅ <code class="language-plaintext highlighter-rouge">/init</code> コマンドでのプロジェクト初期化
-✅ 対話型要件定義の進め方
-✅ 生成されたコードの実行方法</p>
-
-<p>これで、Vibecoding を使った開発の基本的な流れを理解できました！
-次は、より複雑なアプリケーションの開発に挑戦してみましょう。</p>
-
-<div class="success-box">
-<h3>
+<ol>
+  <li>✅ VSCodeでプロジェクトフォルダを開く</li>
+  <li>✅ 統合ターミナルでコマンド実行</li>
+  <li>✅ <code class="language-plaintext highlighter-rouge">/init</code>でプロジェクト初期化</li>
+  <li>✅ 要件定義でコード生成</li>
+  <li>✅ VSCodeで編集・デバッグ</li>
+  <li>✅ Git統合でバージョン管理</li>
+</ol>
+<h2 id="-トラブルシューティング">
   
   
-    <a href="#-まとめ" class="anchor-heading" aria-labelledby="-まとめ"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 🚀 Vibecoding マスターへの第一歩
+    <a href="#-トラブルシューティング" class="anchor-heading" aria-labelledby="-トラブルシューティング"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 🆘 トラブルシューティング
+  
+  
+</h2>
+    
+<h3 id="ターミナルが文字化けする">
+  
+  
+    <a href="#ターミナルが文字化けする" class="anchor-heading" aria-labelledby="ターミナルが文字化けする"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> ターミナルが文字化けする
   
   
 </h3>
     
-  <p>基本を理解したら、さまざまなプロジェクトを作って練習しましょう。</p>
-  <p>作れば作るほど、要件定義のコツがつかめてきます！</p>
+
+<p><strong>解決方法</strong>：</p>
+<ol>
+  <li>ターミナルの設定を開く（歯車アイコン）</li>
+  <li>「Select Default Profile」を選択</li>
+  <li>PowerShell または Git Bash を選択</li>
+</ol>
+<h3 id="npm-startでエラーが出る">
+  
+  
+    <a href="#npm-startでエラーが出る" class="anchor-heading" aria-labelledby="npm-startでエラーが出る"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> npm startでエラーが出る
+  
+  
+</h3>
+    
+
+<p><strong>解決方法</strong>：</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># node_modulesを削除して再インストール</span>
+<span class="nb">rm</span> <span class="nt">-rf</span> node_modules package-lock.json
+npm <span class="nb">install
+</span>npm start
+</code></pre></div></div>
+<h3 id="ポート3000が使用中">
+  
+  
+    <a href="#ポート3000が使用中" class="anchor-heading" aria-labelledby="ポート3000が使用中"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> ポート3000が使用中
+  
+  
+</h3>
+    
+
+<p><strong>解決方法</strong>：</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 別のポートで起動</span>
+<span class="nv">PORT</span><span class="o">=</span>3001 npm start  <span class="c"># Mac/Linux</span>
+<span class="nb">set </span><span class="nv">PORT</span><span class="o">=</span>3001 <span class="o">&amp;&amp;</span> npm start  <span class="c"># Windows</span>
+</code></pre></div></div>
+<h2 id="-次のステップ">
+  
+  
+    <a href="#-次のステップ" class="anchor-heading" aria-labelledby="-次のステップ"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 🚀 次のステップ
+  
+  
+</h2>
+    
+
+<p>基本的な開発フローを理解したら、以下に挑戦してみましょう：</p>
+
+<ul>
+  <li>🎨 UIのカスタマイズ</li>
+  <li>🔧 新機能の追加</li>
+  <li>📱 レスポンシブデザイン</li>
+  <li>🚀 本番環境へのデプロイ</li>
+</ul><hr />
+
+<div class="success-message">
+<h3>
+  
+  
+    <a href="#-次のステップ" class="anchor-heading" aria-labelledby="-次のステップ"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 🎉 おめでとうございます！
+  
+  
+</h3>
+    
+  <p>VSCodeを使ったVibecodingプロジェクトの作成に成功しました。これで本格的な開発を始める準備が整いました！</p>
 </div>
 
 <style>
-.success-box {
+.success-message {
   background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%);
   color: #2c3e50;
   padding: 2rem;
@@ -677,7 +997,7 @@ npm start
   text-align: center;
 }
 
-.success-box h3 {
+.success-message h3 {
   margin-top: 0;
   color: #2c3e50;
 }
