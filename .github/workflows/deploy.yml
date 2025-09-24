@@ -8,6 +8,8 @@ on:
 
 permissions:
   contents: write  # リポジトリへの書き込み権限
+  pages: write      # GitHub Pages への書き込み権限
+  id-token: write   # OIDC トークンの発行権限
 
 jobs:
   build-and-deploy:
@@ -15,10 +17,8 @@ jobs:
 
     steps:
       # ソースコードをチェックアウト
-      - name: Checkout Source Repository
-        uses: actions/checkout@v3
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Checkout Source Code
+        uses: actions/checkout@v4
 
       # Ruby環境をセットアップ
       - name: Setup Ruby
@@ -40,48 +40,22 @@ jobs:
         env:
           JEKYLL_ENV: production
 
-      # ビルドしたサイトを別リポジトリにデプロイ
-      - name: Deploy to GitHub Pages Repository
-        env:
-          TARGET_REPO: ${{ github.repository }}-site  # 自動的に -site を付けたリポジトリ名
-          TARGET_BRANCH: main
-          BUILD_DIR: ./_site
-          GITHUB_TOKEN: ${{ secrets.DEPLOY_TOKEN }}  # Personal Access Token
-        run: |
-          # Gitの設定
-          git config --global user.name "GitHub Actions"
-          git config --global user.email "actions@github.com"
-
-          # ビルドディレクトリに移動
-          cd $BUILD_DIR
-
-          # 新しいGitリポジトリとして初期化
-          git init
-
-          # .nojekyll ファイルを追加（Jekyll処理をスキップ）
-          touch .nojekyll
-
-          # すべてのファイルをステージング
-          git add .
-
-          # コミット
-          git commit -m "Deploy from source repository: ${{ github.sha }}"
-
-          # リモートリポジトリを設定してプッシュ
-          git remote add origin https://x-access-token:${GITHUB_TOKEN}@github.com/${TARGET_REPO}.git
-
-          # 強制プッシュ（履歴をクリーンに保つ）
-          git push -f origin HEAD:${TARGET_BRANCH}
+      # gh-pages ブランチにデプロイ
+      - name: Deploy to gh-pages branch
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_site
+          publish_branch: gh-pages
+          force_orphan: false
+          enable_jekyll: false  # Jekyll処理をスキップ
+          cname: ""  # カスタムドメインを使用しない場合は空
+          commit_message: "Deploy: ${{ github.sha }}"
 
       # デプロイ成功通知
       - name: Deployment Status
         if: success()
         run: |
           echo "✅ Deployment successful!"
-          echo "🌐 Your site will be available at: https://${{ github.repository_owner }}.github.io/$(basename ${{ github.repository }}-site)/"
-
-      # デプロイ失敗通知
-      - name: Deployment Failed
-        if: failure()
-        run: |
-          echo "❌ Deployment failed. Please check the logs."
+          echo "🌐 Your site will be available at: https://${{ github.repository_owner }}.github.io/vibecoding-manual/"
+          echo "📝 Make sure GitHub Pages is enabled for the gh-pages branch in repository settings."

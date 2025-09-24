@@ -1,68 +1,46 @@
 # 📚 Vibecoding スタートガイド - マニュアルプロジェクト
 
 プログラミング初心者向けのVibecoding入門マニュアルです。
-このリポジトリはMarkdownで書かれたドキュメントを、GitHub ActionsでJekyllビルドし、GitHub Pagesで自動公開する仕組みになっています。
+このリポジトリはMarkdownで書かれたドキュメントを、GitHub ActionsでJekyllビルドし、同一リポジトリの`gh-pages`ブランチで自動公開する仕組みになっています。
 
 ## 🏗️ アーキテクチャ
 
 ```
-[ソースリポジトリ] → [GitHub Actions] → [ビルドリポジトリ] → [GitHub Pages]
-vibecoding-manual      Jekyll Build     vibecoding-manual-site   公開サイト
+[main ブランチ] → [GitHub Actions] → [gh-pages ブランチ] → [GitHub Pages]
+ソースコード         Jekyll Build      ビルド済みHTML        公開サイト
 ```
 
 ## 🚀 セットアップ手順
 
-### 1. リポジトリの作成
-
-#### 1.1 ソースリポジトリ
-1. GitHubで `vibecoding-manual` という名前の**パブリック**リポジトリを作成
-2. このプロジェクトのファイルをプッシュ
+### 1. リポジトリのクローンまたはフォーク
 
 ```bash
-git init
-git add .
-git commit -m "Initial commit"
-git branch -M main
-git remote add origin https://github.com/YOUR_USERNAME/vibecoding-manual.git
-git push -u origin main
+git clone https://github.com/YOUR_USERNAME/vibecoding-manual.git
+cd vibecoding-manual
 ```
 
-#### 1.2 ビルドリポジトリ
-1. GitHubで `vibecoding-manual-site` という名前の**パブリック**リポジトリを作成
-2. 初期化は不要（GitHub Actionsが自動で行います）
+### 2. GitHub Pages の設定
 
-### 2. Personal Access Token (PAT) の設定
+1. GitHubリポジトリの **Settings** タブを開く
+2. 左メニューから **Pages** を選択
+3. **Source** で **Deploy from a branch** を選択
+4. **Branch** で **gh-pages** / **/ (root)** を選択
+5. **Save** をクリック
 
-#### 2.1 PATの作成
-1. GitHub → Settings → Developer settings → Personal access tokens → Tokens (classic)
-2. 「Generate new token」をクリック
-3. 名前: `DEPLOY_TOKEN`
-4. 有効期限: お好みで設定
-5. スコープ: `repo` にチェック
-6. 「Generate token」をクリック
-7. **トークンをコピー**（この画面を離れると二度と見られません！）
+### 3. 初回デプロイの実行
 
-#### 2.2 Secretsに登録
-1. ソースリポジトリ（vibecoding-manual）の Settings → Secrets and variables → Actions
-2. 「New repository secret」をクリック
-3. Name: `DEPLOY_TOKEN`
-4. Secret: コピーしたトークンを貼り付け
-5. 「Add secret」をクリック
+mainブランチへのプッシュで自動デプロイが開始されます：
 
-### 3. GitHub Pages の設定
+```bash
+git add .
+git commit -m "Update content"
+git push origin main
+```
 
-#### 3.1 ビルドリポジトリでPages有効化
-1. `vibecoding-manual-site` リポジトリの Settings → Pages
-2. Source: Deploy from a branch
-3. Branch: `main` / `/ (root)`
-4. 「Save」をクリック
-
-### 4. 自動デプロイの実行
-
-1. ソースリポジトリの Actions タブを確認
-2. ワークフローが自動実行されているか確認
-3. 初回は手動実行も可能:
-   - Actions → Build and Deploy to GitHub Pages → Run workflow
+または、GitHub Actionsから手動実行：
+1. **Actions** タブを開く
+2. **Build and Deploy to GitHub Pages** を選択
+3. **Run workflow** をクリック
 
 ## 📝 コンテンツの更新方法
 
@@ -145,14 +123,15 @@ navigation:
 
 ### ページが404になる
 - リポジトリがパブリックか確認
-- GitHub Pages が有効か確認
+- GitHub Pages が有効か確認（Settings → Pages）
+- gh-pagesブランチが存在するか確認
 - ビルドが成功しているか確認
 - 数分待ってから再度アクセス
 
-### Personal Access Tokenエラー
-- トークンの有効期限を確認
-- `repo` スコープが有効か確認
-- Secretsに正しく登録されているか確認
+### GitHub Actions エラー
+- permissions設定を確認
+- GITHUB_TOKENが正しく使用されているか確認
+- ワークフローファイルの構文を確認
 
 ## 📖 リソース
 
@@ -172,4 +151,4 @@ navigation:
 
 ---
 
-**公開URL**: `https://YOUR_USERNAME.github.io/vibecoding-manual-site/`
+**公開URL**: `https://YOUR_USERNAME.github.io/vibecoding-manual/`
