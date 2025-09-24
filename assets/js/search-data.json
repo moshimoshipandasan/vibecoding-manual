@@ -1,0 +1,331 @@
+{"0": {
+    "doc": "最初のプロジェクト",
+    "title": "🎯 最初のVibecoding プロジェクトを始める",
+    "content": "環境構築が完了したら、いよいよVibecoding を使って最初のプロジェクトを作成しましょう！ . ",
+    "url": "/vibecoding-manual/getting-started/first-project/#-%E6%9C%80%E5%88%9D%E3%81%AEvibecoding-%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%82%92%E5%A7%8B%E3%82%81%E3%82%8B",
+    
+    "relUrl": "/getting-started/first-project/#-最初のvibecoding-プロジェクトを始める"
+  },"1": {
+    "doc": "最初のプロジェクト",
+    "title": "📁 Step 1: プロジェクトフォルダの作成",
+    "content": "1.1 作業ディレクトリを作成 . まず、プロジェクト用のフォルダを作成します。 . Windows (PowerShell): . # ドキュメントフォルダに移動 cd ~/Documents # プロジェクト用フォルダを作成 mkdir MyVibecodingProjects # 作成したフォルダに移動 cd MyVibecodingProjects . Mac (ターミナル): . # ホームディレクトリに移動 cd ~ # プロジェクト用フォルダを作成 mkdir MyVibecodingProjects # 作成したフォルダに移動 cd MyVibecodingProjects . ",
+    "url": "/vibecoding-manual/getting-started/first-project/#-step-1-%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%83%95%E3%82%A9%E3%83%AB%E3%83%80%E3%81%AE%E4%BD%9C%E6%88%90",
+    
+    "relUrl": "/getting-started/first-project/#-step-1-プロジェクトフォルダの作成"
+  },"2": {
+    "doc": "最初のプロジェクト",
+    "title": "🚀 Step 2: Vibecoding プロジェクトの初期化",
+    "content": "2.1 /init コマンドの実行 . プロジェクトフォルダ内で以下のコマンドを実行します： . codex /init . このコマンドを実行すると、対話型のセットアップが始まります。 . 2.2 プロジェクト情報の入力 . セットアップ中に以下の質問が表示されます： . ? プロジェクト名を入力してください: my-first-app ? プロジェクトの説明を入力してください: 私の最初のVibecoding アプリケーション ? 使用するフレームワークを選択してください: (Use arrow keys) ❯ React Vue Angular Node.js (バックエンド) その他 . 矢印キーで選択して、Enterキーで決定します。 . ",
+    "url": "/vibecoding-manual/getting-started/first-project/#-step-2-vibecoding-%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%81%AE%E5%88%9D%E6%9C%9F%E5%8C%96",
+    
+    "relUrl": "/getting-started/first-project/#-step-2-vibecoding-プロジェクトの初期化"
+  },"3": {
+    "doc": "最初のプロジェクト",
+    "title": "📝 Step 3: 要件定義を始める",
+    "content": "3.1 要件定義モードの開始 . プロジェクトの初期化が完了したら、要件定義を開始します： . codex requirements . 3.2 対話型要件定義の流れ . Vibecoding のAIアシスタントが、プロジェクトの要件について質問してきます。 . 例：TODOリストアプリを作る場合 . AI: どのようなアプリケーションを作成しますか？ あなた: TODOリストを管理できるウェブアプリケーションを作りたいです AI: 了解しました。TODOリストアプリですね。 以下の機能について確認させてください： 1. タスクの追加・削除機能は必要ですか？ 2. タスクの完了/未完了の管理は必要ですか？ 3. カテゴリ分けは必要ですか？ 4. 期限の設定は必要ですか？ あなた: 1と2は必要です。カテゴリ分けと期限設定は今回は不要です。 AI: 承知しました。それでは以下の仕様で進めます： - ✅ タスクの追加機能 - ✅ タスクの削除機能 - ✅ 完了/未完了の状態管理 - ❌ カテゴリ機能（実装しない） - ❌ 期限設定機能（実装しない） この内容でよろしいですか？(yes/no) あなた: yes . 3.3 要件定義のコツ . 🎯 明確に伝える . 良い例： . | 「ユーザーがログインできる機能が必要です」 | 「商品を検索して、カートに追加できるようにしたい」 | 「管理者だけが記事を編集できるようにしたい」 | . 避けるべき例： . | 「いい感じのアプリ」 | 「使いやすくしてください」 | . 📊 段階的に進める . 最初はシンプルな機能から始めて、後から機能を追加していくことができます。 . 推奨アプローチ： . | MVP（最小限の機能）を最初に定義 . | 基本機能だけでスタート | . | 動作確認後に機能追加 . | 基本が動いてから拡張 | . | . 💡 わからないことは質問する . AIアシスタントに質問することもできます： . あなた: ユーザー認証とは何ですか？ AI: ユーザー認証は、アプリケーションを使う人が 誰なのかを確認する仕組みです。 例えば： - ログイン/ログアウト機能 - パスワードによる本人確認 - 会員登録機能 などが含まれます。必要ですか？ . ",
+    "url": "/vibecoding-manual/getting-started/first-project/#-step-3-%E8%A6%81%E4%BB%B6%E5%AE%9A%E7%BE%A9%E3%82%92%E5%A7%8B%E3%82%81%E3%82%8B",
+    
+    "relUrl": "/getting-started/first-project/#-step-3-要件定義を始める"
+  },"4": {
+    "doc": "最初のプロジェクト",
+    "title": "🎨 Step 4: コード生成",
+    "content": "4.1 要件定義完了後の自動生成 . 要件定義が完了すると、Vibecoding が自動的にコードを生成します： . 要件定義が完了しました。 コードを生成中... ✅ プロジェクト構造を作成しました ✅ 必要なファイルを生成しました ✅ 依存関係をインストールしました 生成が完了しました！ . 4.2 生成されたファイルの確認 . 生成されたプロジェクト構造を確認： . # ファイル一覧を表示 ls -la # Mac/Linux dir # Windows . 典型的な構造： . my-first-app/ ├── src/ # ソースコード ├── public/ # 公開ファイル ├── package.json # プロジェクト設定 ├── README.md # プロジェクト説明 └── .gitignore # Git除外設定 . ",
+    "url": "/vibecoding-manual/getting-started/first-project/#-step-4-%E3%82%B3%E3%83%BC%E3%83%89%E7%94%9F%E6%88%90",
+    
+    "relUrl": "/getting-started/first-project/#-step-4-コード生成"
+  },"5": {
+    "doc": "最初のプロジェクト",
+    "title": "🏃 Step 5: アプリケーションの実行",
+    "content": "5.1 開発サーバーの起動 . 生成されたプロジェクトフォルダに移動して、開発サーバーを起動： . # プロジェクトフォルダに移動 cd my-first-app # 開発サーバーを起動 npm start . 5.2 ブラウザで確認 . 開発サーバーが起動したら、ブラウザが自動的に開きます。 もし開かない場合は、以下のURLにアクセス： . http://localhost:3000 . 🎉 おめでとうございます！ あなたの最初のVibecoding アプリケーションが動作しています！ . ",
+    "url": "/vibecoding-manual/getting-started/first-project/#-step-5-%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AE%E5%AE%9F%E8%A1%8C",
+    
+    "relUrl": "/getting-started/first-project/#-step-5-アプリケーションの実行"
+  },"6": {
+    "doc": "最初のプロジェクト",
+    "title": "📚 次のステップ",
+    "content": "機能の追加 . 要件を追加したい場合： . codex requirements --add . コードの修正 . 生成されたコードを修正したい場合： . codex modify . ヘルプの表示 . コマンドの使い方を確認： . codex help . ",
+    "url": "/vibecoding-manual/getting-started/first-project/#-%E6%AC%A1%E3%81%AE%E3%82%B9%E3%83%86%E3%83%83%E3%83%97",
+    
+    "relUrl": "/getting-started/first-project/#-次のステップ"
+  },"7": {
+    "doc": "最初のプロジェクト",
+    "title": "🆘 よくある質問",
+    "content": "Q: エラーが出て起動しない . A: 以下を確認してください： . | Node.jsが正しくインストールされているか | プロジェクトフォルダ内でnpm installを実行 | ポート3000が他のアプリで使われていないか | . Q: 生成されたコードを編集したい . A: お好みのエディタ（VS Code、Sublime Text など）で自由に編集できます。 . Q: 要件定義をやり直したい . A: 以下のコマンドで要件を再定義できます： . codex requirements --reset . ",
+    "url": "/vibecoding-manual/getting-started/first-project/#-%E3%82%88%E3%81%8F%E3%81%82%E3%82%8B%E8%B3%AA%E5%95%8F",
+    
+    "relUrl": "/getting-started/first-project/#-よくある質問"
+  },"8": {
+    "doc": "最初のプロジェクト",
+    "title": "🎓 まとめ",
+    "content": "このガイドで学んだこと： . ✅ プロジェクトフォルダの作成方法 ✅ /init コマンドでのプロジェクト初期化 ✅ 対話型要件定義の進め方 ✅ 生成されたコードの実行方法 . これで、Vibecoding を使った開発の基本的な流れを理解できました！ 次は、より複雑なアプリケーションの開発に挑戦してみましょう。 . 🚀 Vibecoding マスターへの第一歩 . 基本を理解したら、さまざまなプロジェクトを作って練習しましょう。 . 作れば作るほど、要件定義のコツがつかめてきます！ . ",
+    "url": "/vibecoding-manual/getting-started/first-project/#-%E3%81%BE%E3%81%A8%E3%82%81",
+    
+    "relUrl": "/getting-started/first-project/#-まとめ"
+  },"9": {
+    "doc": "最初のプロジェクト",
+    "title": "最初のプロジェクト",
+    "content": " ",
+    "url": "/vibecoding-manual/getting-started/first-project/",
+    
+    "relUrl": "/getting-started/first-project/"
+  },"10": {
+    "doc": "環境構築",
+    "title": "環境構築",
+    "content": "Vibecodingを使い始めるための環境構築ガイドです。お使いのOSに応じて、必要なツールをインストールしていきます。 . ",
+    "url": "/vibecoding-manual/getting-started/",
+    
+    "relUrl": "/getting-started/"
+  },"11": {
+    "doc": "環境構築",
+    "title": "目次",
+    "content": ". | 概要 | 必要なツール | セットアップの流れ | トラブルシューティング | . ",
+    "url": "/vibecoding-manual/getting-started/#%E7%9B%AE%E6%AC%A1",
+    
+    "relUrl": "/getting-started/#目次"
+  },"12": {
+    "doc": "環境構築",
+    "title": "概要",
+    "content": "Vibecodingの開発環境を構築するには、以下のステップを順番に進めていきます： . | 前提条件の確認 - 必要なツールがインストールされているか確認 | OS別セットアップ - WindowsまたはMacの環境に応じた設定 | プロジェクト作成 - 最初のVibecodingプロジェクトを作成 | . ",
+    "url": "/vibecoding-manual/getting-started/#%E6%A6%82%E8%A6%81",
+    
+    "relUrl": "/getting-started/#概要"
+  },"13": {
+    "doc": "環境構築",
+    "title": "必要なツール",
+    "content": ". | Node.js v16.0以上 | Git v2.0以上 | gemini-cli （Node.js経由でインストール） | codex-cli （Node.js経由でインストール） | . ",
+    "url": "/vibecoding-manual/getting-started/#%E5%BF%85%E8%A6%81%E3%81%AA%E3%83%84%E3%83%BC%E3%83%AB",
+    
+    "relUrl": "/getting-started/#必要なツール"
+  },"14": {
+    "doc": "環境構築",
+    "title": "セットアップの流れ",
+    "content": "graph TD A[前提条件の確認] --&gt; B{OSの選択} B --&gt; C[Windows セットアップ] B --&gt; D[Mac セットアップ] C --&gt; E[CLIツールのインストール] D --&gt; E E --&gt; F[最初のプロジェクト作成] . ",
+    "url": "/vibecoding-manual/getting-started/#%E3%82%BB%E3%83%83%E3%83%88%E3%82%A2%E3%83%83%E3%83%97%E3%81%AE%E6%B5%81%E3%82%8C",
+    
+    "relUrl": "/getting-started/#セットアップの流れ"
+  },"15": {
+    "doc": "環境構築",
+    "title": "トラブルシューティング",
+    "content": "環境構築で問題が発生した場合は、各ページの「トラブルシューティング」セクションを参照してください。 . よくある問題： . | Node.jsのバージョンが古い | npmの権限エラー | Gitの初期設定が未完了 | . 次のステップ: 前提条件の確認から始めましょう。 . ",
+    "url": "/vibecoding-manual/getting-started/#%E3%83%88%E3%83%A9%E3%83%96%E3%83%AB%E3%82%B7%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0",
+    
+    "relUrl": "/getting-started/#トラブルシューティング"
+  },"16": {
+    "doc": "ホーム",
+    "title": "Vibecoding スタートガイド",
+    "content": "プログラミング初心者でも簡単に始められる、Vibecodingの完全ガイドです。 . 環境構築を始める GitHubで見る . ",
+    "url": "/vibecoding-manual/#vibecoding-%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%88%E3%82%AC%E3%82%A4%E3%83%89",
+    
+    "relUrl": "/#vibecoding-スタートガイド"
+  },"17": {
+    "doc": "ホーム",
+    "title": "このガイドについて",
+    "content": "Vibecodingは、AIの力を借りて効率的にコーディングを進めるための開発支援ツールです。このガイドでは、環境構築から最初のプロジェクト作成まで、ステップバイステップで解説します。 . 主な特徴 . | ✨ 対話型開発 - AIと対話しながら要件定義を進められます | 🚀 自動生成 - 要件に基づいてコードを自動生成します | 📚 初心者対応 - プログラミング知識が少なくても始められます | 🔧 簡単セットアップ - 必要なツールを順番にインストールするだけ | . ",
+    "url": "/vibecoding-manual/#%E3%81%93%E3%81%AE%E3%82%AC%E3%82%A4%E3%83%89%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6",
+    
+    "relUrl": "/#このガイドについて"
+  },"18": {
+    "doc": "ホーム",
+    "title": "クイックスタート",
+    "content": "📋 前提条件の確認 . 開発を始める前に、以下のツールがインストールされているか確認してください： . | Node.js (v16.0以上) | Git (v2.0以上) | . # Node.jsのバージョン確認 node --version # Gitのバージョン確認 git --version . 🖥️ OS別セットアップ . お使いのOSに応じて、セットアップガイドをご覧ください： . - **Windows ユーザー** - [Windows セットアップガイド](/vibecoding-manual/getting-started/windows-setup/) - **Mac ユーザー** - [Mac セットアップガイド](/vibecoding-manual/getting-started/mac-setup/) 🎯 最初のプロジェクト . 環境構築が完了したら、最初のプロジェクト作成に進みましょう。 . ",
+    "url": "/vibecoding-manual/#getting-started",
+    
+    "relUrl": "/#getting-started"
+  },"19": {
+    "doc": "ホーム",
+    "title": "学習の流れ",
+    "content": ". | 環境確認 - 必要なツールの確認 | 環境構築 - Node.jsとGitのインストール | CLIツール導入 - gemini-cliとcodex-cliのインストール | プロジェクト作成 - /initコマンドで開始 | . ",
+    "url": "/vibecoding-manual/#%E5%AD%A6%E7%BF%92%E3%81%AE%E6%B5%81%E3%82%8C",
+    
+    "relUrl": "/#学習の流れ"
+  },"20": {
+    "doc": "ホーム",
+    "title": "サポート",
+    "content": "問題が発生した場合は、各ページのトラブルシューティングセクションを参照してください。 . コミュニティ . | GitHub Issues - バグ報告や質問 | Discussions - コミュニティでの議論 | . このドキュメントは継続的に更新されています。最新版はGitHubリポジトリでご確認ください。 . ",
+    "url": "/vibecoding-manual/#%E3%82%B5%E3%83%9D%E3%83%BC%E3%83%88",
+    
+    "relUrl": "/#サポート"
+  },"21": {
+    "doc": "ホーム",
+    "title": "ホーム",
+    "content": " ",
+    "url": "/vibecoding-manual/",
+    
+    "relUrl": "/"
+  },"22": {
+    "doc": "Mac セットアップ",
+    "title": "🍎 Mac セットアップガイド",
+    "content": "macOS環境でVibecoding開発環境を構築する手順を説明します。 . ",
+    "url": "/vibecoding-manual/getting-started/mac-setup/#-mac-%E3%82%BB%E3%83%83%E3%83%88%E3%82%A2%E3%83%83%E3%83%97%E3%82%AC%E3%82%A4%E3%83%89",
+    
+    "relUrl": "/getting-started/mac-setup/#-mac-セットアップガイド"
+  },"23": {
+    "doc": "Mac セットアップ",
+    "title": "🛠️ Step 1: Homebrew のインストール（推奨）",
+    "content": "Homebrewは、Macでソフトウェアを簡単にインストールできるパッケージマネージャーです。 . 1.1 Homebrewのインストール . ターミナルを開いて以下のコマンドを実行： . /bin/bash -c \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)\" . インストール中にパスワードを求められたら、Macのログインパスワードを入力してください。 . 1.2 インストールの確認 . brew --version . ✅ バージョン番号が表示されれば成功です！ . ",
+    "url": "/vibecoding-manual/getting-started/mac-setup/#%EF%B8%8F-step-1-homebrew-%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E6%8E%A8%E5%A5%A8",
+    
+    "relUrl": "/getting-started/mac-setup/#️-step-1-homebrew-のインストール推奨"
+  },"24": {
+    "doc": "Mac セットアップ",
+    "title": "📦 Step 2: Node.js のインストール",
+    "content": "方法A: Homebrew を使用（推奨） . # Node.jsとnpmをインストール brew install node # インストール確認 node --version npm --version . 方法B: 公式インストーラーを使用 . | Node.js 公式サイト にアクセス | 「LTS」バージョン（推奨版）をクリック | macOS用の .pkg ファイルをダウンロード | ダウンロードしたファイルをダブルクリック | インストーラーの指示に従って進める | インストール完了 | . インストール確認 . 新しいターミナルウィンドウを開いて： . node --version npm --version . ",
+    "url": "/vibecoding-manual/getting-started/mac-setup/#-step-2-nodejs-%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB",
+    
+    "relUrl": "/getting-started/mac-setup/#-step-2-nodejs-のインストール"
+  },"25": {
+    "doc": "Mac セットアップ",
+    "title": "🔧 Step 3: Git のインストールと設定",
+    "content": "3.1 Git のインストール確認 . macOSには通常Gitがプリインストールされています： . git --version . もしインストールされていない場合は、以下のいずれかの方法でインストール： . 方法A: Xcode Command Line Tools（自動） . git --version . このコマンドを実行すると、自動的にインストールダイアログが表示されます。 . 方法B: Homebrew を使用 . brew install git . 3.2 Git の初期設定 . ユーザー情報を設定します（自分の情報に置き換えてください）： . git config --global user.name \"あなたの名前\" git config --global user.email \"your.email@example.com\" . 例： . git config --global user.name \"Taro Yamada\" git config --global user.email \"taro@example.com\" . 3.3 設定の確認 . git config --list . ",
+    "url": "/vibecoding-manual/getting-started/mac-setup/#-step-3-git-%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E8%A8%AD%E5%AE%9A",
+    
+    "relUrl": "/getting-started/mac-setup/#-step-3-git-のインストールと設定"
+  },"26": {
+    "doc": "Mac セットアップ",
+    "title": "🚀 Step 4: Vibecoding CLI ツールのインストール",
+    "content": "4.1 gemini-cli のインストール . ターミナルで以下のコマンドを実行： . npm install -g @genkit-ai/cli . インストール確認： . genkit --version . 4.2 codex-cli のインストール . npm install -g @vibecoding/codex-cli . インストール確認： . codex --version . ⚠️ 権限エラーが出る場合の対処法 . npmのグローバルインストールで権限エラーが出る場合： . 解決方法1: npmのプレフィックスを変更 . # npmのディレクトリを作成 mkdir ~/.npm-global # npmの設定を変更 npm config set prefix '~/.npm-global' # パスを追加（zshの場合） echo 'export PATH=~/.npm-global/bin:$PATH' &gt;&gt; ~/.zshrc source ~/.zshrc # bashの場合 echo 'export PATH=~/.npm-global/bin:$PATH' &gt;&gt; ~/.bash_profile source ~/.bash_profile . その後、再度インストールコマンドを実行してください。 . ",
+    "url": "/vibecoding-manual/getting-started/mac-setup/#-step-4-vibecoding-cli-%E3%83%84%E3%83%BC%E3%83%AB%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB",
+    
+    "relUrl": "/getting-started/mac-setup/#-step-4-vibecoding-cli-ツールのインストール"
+  },"27": {
+    "doc": "Mac セットアップ",
+    "title": "🎨 Step 5: 開発環境の最終確認",
+    "content": "すべてのツールが正しくインストールされているか確認しましょう： . # Node.js の確認 node --version # npm の確認 npm --version # Git の確認 git --version # gemini-cli の確認 genkit --version # codex-cli の確認 codex --version . すべてのコマンドでバージョン番号が表示されれば、環境構築は完了です！ . ",
+    "url": "/vibecoding-manual/getting-started/mac-setup/#-step-5-%E9%96%8B%E7%99%BA%E7%92%B0%E5%A2%83%E3%81%AE%E6%9C%80%E7%B5%82%E7%A2%BA%E8%AA%8D",
+    
+    "relUrl": "/getting-started/mac-setup/#-step-5-開発環境の最終確認"
+  },"28": {
+    "doc": "Mac セットアップ",
+    "title": "🆘 トラブルシューティング",
+    "content": "command not found エラー . 原因: パスが通っていない . 解決方法: . | シェルの設定ファイルを確認： echo $SHELL # 使用中のシェルを確認 . | zshの場合： echo 'export PATH=\"/usr/local/bin:$PATH\"' &gt;&gt; ~/.zshrc source ~/.zshrc . | bashの場合： echo 'export PATH=\"/usr/local/bin:$PATH\"' &gt;&gt; ~/.bash_profile source ~/.bash_profile . | . Homebrew の警告メッセージ . 解決方法: . # Homebrewを最新版に更新 brew update # 問題を診断 brew doctor . 診断結果に従って修正を行ってください。 . macOS のセキュリティ警告 . 「開発元が未確認のため開けません」というエラーが出る場合： . 解決方法: . | システム環境設定 → セキュリティとプライバシー | 「一般」タブ | 「このまま開く」をクリック | . ",
+    "url": "/vibecoding-manual/getting-started/mac-setup/#-%E3%83%88%E3%83%A9%E3%83%96%E3%83%AB%E3%82%B7%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0",
+    
+    "relUrl": "/getting-started/mac-setup/#-トラブルシューティング"
+  },"29": {
+    "doc": "Mac セットアップ",
+    "title": "✅ セットアップ完了！",
+    "content": "おめでとうございます！Mac環境でのVibecoding開発環境の構築が完了しました。 . 🎯 次のステップ . 環境構築が完了したら、最初のプロジェクトを作成してみましょう！ . 最初のプロジェクトを始める → ",
+    "url": "/vibecoding-manual/getting-started/mac-setup/#-%E3%82%BB%E3%83%83%E3%83%88%E3%82%A2%E3%83%83%E3%83%97%E5%AE%8C%E4%BA%86",
+    
+    "relUrl": "/getting-started/mac-setup/#-セットアップ完了"
+  },"30": {
+    "doc": "Mac セットアップ",
+    "title": "Mac セットアップ",
+    "content": " ",
+    "url": "/vibecoding-manual/getting-started/mac-setup/",
+    
+    "relUrl": "/getting-started/mac-setup/"
+  },"31": {
+    "doc": "前提条件の確認",
+    "title": "📋 前提条件の確認",
+    "content": "Vibecoding を使い始める前に、お使いのPCに必要なツールがインストールされているか確認しましょう。 . ",
+    "url": "/vibecoding-manual/getting-started/prerequisites/#-%E5%89%8D%E6%8F%90%E6%9D%A1%E4%BB%B6%E3%81%AE%E7%A2%BA%E8%AA%8D",
+    
+    "relUrl": "/getting-started/prerequisites/#-前提条件の確認"
+  },"32": {
+    "doc": "前提条件の確認",
+    "title": "🔍 確認が必要なツール",
+    "content": ". | Node.js (バージョン 16.0 以上) | Git (バージョン 2.0 以上) | . ",
+    "url": "/vibecoding-manual/getting-started/prerequisites/#-%E7%A2%BA%E8%AA%8D%E3%81%8C%E5%BF%85%E8%A6%81%E3%81%AA%E3%83%84%E3%83%BC%E3%83%AB",
+    
+    "relUrl": "/getting-started/prerequisites/#-確認が必要なツール"
+  },"33": {
+    "doc": "前提条件の確認",
+    "title": "📊 現在の環境を確認する",
+    "content": "Node.js のバージョン確認 . ターミナル（コマンドプロンプト）を開いて、以下のコマンドを実行してください： . node --version . 期待される出力例： . v18.17.0 . ✅ 成功: v16.0.0 以上のバージョンが表示されればOKです ❌ 失敗: コマンドが認識されない、または古いバージョンの場合はインストールが必要です . Git のバージョン確認 . 同じくターミナルで以下のコマンドを実行します： . git --version . 期待される出力例： . git version 2.42.0 . ✅ 成功: 2.0.0 以上のバージョンが表示されればOKです ❌ 失敗: コマンドが認識されない場合はインストールが必要です . ",
+    "url": "/vibecoding-manual/getting-started/prerequisites/#-%E7%8F%BE%E5%9C%A8%E3%81%AE%E7%92%B0%E5%A2%83%E3%82%92%E7%A2%BA%E8%AA%8D%E3%81%99%E3%82%8B",
+    
+    "relUrl": "/getting-started/prerequisites/#-現在の環境を確認する"
+  },"34": {
+    "doc": "前提条件の確認",
+    "title": "🖥️ ターミナルの開き方",
+    "content": "Windows の場合 . 以下のいずれかの方法でターミナルを開けます： . | コマンドプロンプト . | Windows キー + R を押す | cmd と入力して Enter | . | PowerShell (推奨) . | Windows キー + X を押す | 「Windows PowerShell」を選択 | . | Windows Terminal (Windows 11) . | Windows キー を押す | 「Terminal」と入力して Enter | . | . Mac の場合 . | ターミナル . | Command + Space を押す（Spotlight検索） | 「Terminal」または「ターミナル」と入力 | Enter キーを押す | . | または . | Finder を開く | アプリケーション → ユーティリティ → ターミナル | . | . ",
+    "url": "/vibecoding-manual/getting-started/prerequisites/#%EF%B8%8F-%E3%82%BF%E3%83%BC%E3%83%9F%E3%83%8A%E3%83%AB%E3%81%AE%E9%96%8B%E3%81%8D%E6%96%B9",
+    
+    "relUrl": "/getting-started/prerequisites/#️-ターミナルの開き方"
+  },"35": {
+    "doc": "前提条件の確認",
+    "title": "⚠️ トラブルシューティング",
+    "content": "「コマンドが見つかりません」エラーが出る場合 . このエラーは、ツールがインストールされていないか、パスが通っていないことを示しています。 . 解決方法： . | お使いのOSに応じたセットアップガイドに進んでください | Windows セットアップ | Mac セットアップ | . バージョンが古い場合 . 既にインストール済みでもバージョンが古い場合は、アップデートが必要です。セットアップガイドでアップデート方法を説明しています。 . ",
+    "url": "/vibecoding-manual/getting-started/prerequisites/#%EF%B8%8F-%E3%83%88%E3%83%A9%E3%83%96%E3%83%AB%E3%82%B7%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0",
+    
+    "relUrl": "/getting-started/prerequisites/#️-トラブルシューティング"
+  },"36": {
+    "doc": "前提条件の確認",
+    "title": "📝 チェックリスト",
+    "content": "インストール作業に進む前に、以下を確認してください： . | ターミナル（コマンドプロンプト）を開ける | Node.js のバージョンを確認した | Git のバージョンを確認した | 必要に応じてインストールまたはアップデートが必要か判断した | . ",
+    "url": "/vibecoding-manual/getting-started/prerequisites/#-%E3%83%81%E3%82%A7%E3%83%83%E3%82%AF%E3%83%AA%E3%82%B9%E3%83%88",
+    
+    "relUrl": "/getting-started/prerequisites/#-チェックリスト"
+  },"37": {
+    "doc": "前提条件の確認",
+    "title": "🎯 次のステップ",
+    "content": "環境確認が完了したら、お使いのOSに応じてセットアップを進めましょう： . 🪟 Windows セットアップへ進む 🍎 Mac セットアップへ進む ",
+    "url": "/vibecoding-manual/getting-started/prerequisites/#-%E6%AC%A1%E3%81%AE%E3%82%B9%E3%83%86%E3%83%83%E3%83%97",
+    
+    "relUrl": "/getting-started/prerequisites/#-次のステップ"
+  },"38": {
+    "doc": "前提条件の確認",
+    "title": "前提条件の確認",
+    "content": " ",
+    "url": "/vibecoding-manual/getting-started/prerequisites/",
+    
+    "relUrl": "/getting-started/prerequisites/"
+  },"39": {
+    "doc": "Windows セットアップ",
+    "title": "🪟 Windows セットアップガイド",
+    "content": "Windows環境でVibecoding開発環境を構築する手順を説明します。 . ",
+    "url": "/vibecoding-manual/getting-started/windows-setup/#-windows-%E3%82%BB%E3%83%83%E3%83%88%E3%82%A2%E3%83%83%E3%83%97%E3%82%AC%E3%82%A4%E3%83%89",
+    
+    "relUrl": "/getting-started/windows-setup/#-windows-セットアップガイド"
+  },"40": {
+    "doc": "Windows セットアップ",
+    "title": "📦 Step 1: Node.js のインストール",
+    "content": "1.1 インストーラーのダウンロード . | Node.js 公式サイト にアクセス | 「LTS」バージョン（推奨版）をクリック | ダウンロードが自動的に開始されます | . 💡 LTS版を選ぶ理由: 長期サポート版で安定性が高く、初心者に最適です . 1.2 インストール手順 . | ダウンロードした node-vXX.XX.X-x64.msi をダブルクリック | インストーラーが起動したら「Next」をクリック | ライセンス同意画面で「I accept…」にチェックを入れて「Next」 | インストール先はデフォルトのままで「Next」 | 重要: 「Automatically install the necessary tools…」にチェックを入れる | 「Install」をクリック | 管理者権限を求められたら「はい」を選択 | インストール完了後、「Finish」をクリック | . 1.3 インストールの確認 . PowerShell または コマンドプロンプトを新しく開いて以下を実行： . node --version npm --version . ✅ バージョン番号が表示されれば成功です！ . ",
+    "url": "/vibecoding-manual/getting-started/windows-setup/#-step-1-nodejs-%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB",
+    
+    "relUrl": "/getting-started/windows-setup/#-step-1-nodejs-のインストール"
+  },"41": {
+    "doc": "Windows セットアップ",
+    "title": "🔧 Step 2: Git のインストール",
+    "content": "2.1 Git for Windows のダウンロード . | Git for Windows にアクセス | 「Download」ボタンをクリック | ダウンロードが開始されます | . 2.2 インストール手順 . | ダウンロードした Git-X.XX.X-64-bit.exe をダブルクリック | インストーラーが起動したら「Next」をクリック | インストール先はデフォルトのままで「Next」 | コンポーネント選択画面： . | ✅ 「Git Bash Here」にチェック | ✅ 「Git GUI Here」にチェック | 「Next」をクリック | . | デフォルトエディタの選択： . | 初心者は「Use Notepad as Git’s default editor」を選択 | 「Next」をクリック | . | 残りの設定はすべてデフォルトのまま「Next」を連続クリック | 「Install」をクリック | 「Finish」をクリック | . 2.3 Git の初期設定 . PowerShell を開いて以下のコマンドを実行（自分の情報に置き換えてください）： . git config --global user.name \"あなたの名前\" git config --global user.email \"your.email@example.com\" . 例： . git config --global user.name \"Taro Yamada\" git config --global user.email \"taro@example.com\" . 2.4 設定の確認 . git config --list . 自分の名前とメールアドレスが表示されれば成功です！ . ",
+    "url": "/vibecoding-manual/getting-started/windows-setup/#-step-2-git-%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB",
+    
+    "relUrl": "/getting-started/windows-setup/#-step-2-git-のインストール"
+  },"42": {
+    "doc": "Windows セットアップ",
+    "title": "🚀 Step 3: Vibecoding CLI ツールのインストール",
+    "content": "3.1 gemini-cli のインストール . PowerShell で以下のコマンドを実行： . npm install -g @genkit-ai/cli . インストール確認： . genkit --version . 3.2 codex-cli のインストール . npm install -g @vibecoding/codex-cli . インストール確認： . codex --version . ⚠️ 権限エラーが出る場合: PowerShellを管理者として実行してから再度試してください . | Windowsキーを右クリック | 「Windows PowerShell (管理者)」を選択 | . ",
+    "url": "/vibecoding-manual/getting-started/windows-setup/#-step-3-vibecoding-cli-%E3%83%84%E3%83%BC%E3%83%AB%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB",
+    
+    "relUrl": "/getting-started/windows-setup/#-step-3-vibecoding-cli-ツールのインストール"
+  },"43": {
+    "doc": "Windows セットアップ",
+    "title": "🎨 Step 4: 開発環境の最終確認",
+    "content": "すべてのツールが正しくインストールされているか確認しましょう： . # Node.js の確認 node --version # npm の確認 npm --version # Git の確認 git --version # gemini-cli の確認 genkit --version # codex-cli の確認 codex --version . すべてのコマンドでバージョン番号が表示されれば、環境構築は完了です！ . ",
+    "url": "/vibecoding-manual/getting-started/windows-setup/#-step-4-%E9%96%8B%E7%99%BA%E7%92%B0%E5%A2%83%E3%81%AE%E6%9C%80%E7%B5%82%E7%A2%BA%E8%AA%8D",
+    
+    "relUrl": "/getting-started/windows-setup/#-step-4-開発環境の最終確認"
+  },"44": {
+    "doc": "Windows セットアップ",
+    "title": "🆘 トラブルシューティング",
+    "content": "npm コマンドが認識されない . 解決方法： . | PowerShellを再起動 | それでもダメな場合は、PCを再起動 | 環境変数PATHにNode.jsのパスが追加されているか確認 | . 権限エラー (EACCES/EPERM) . 解決方法： PowerShellを管理者権限で実行： . | Windowsキーを右クリック | 「Windows PowerShell (管理者)」を選択 | コマンドを再実行 | . ウイルス対策ソフトの警告 . 一部のウイルス対策ソフトはnpmパッケージのインストールを妨げることがあります。 . 解決方法： . | 一時的にリアルタイム保護を無効化 | インストールを実行 | インストール後、保護を再度有効化 | . ",
+    "url": "/vibecoding-manual/getting-started/windows-setup/#-%E3%83%88%E3%83%A9%E3%83%96%E3%83%AB%E3%82%B7%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0",
+    
+    "relUrl": "/getting-started/windows-setup/#-トラブルシューティング"
+  },"45": {
+    "doc": "Windows セットアップ",
+    "title": "✅ セットアップ完了！",
+    "content": "おめでとうございます！Windows環境でのVibecoding開発環境の構築が完了しました。 . 🎯 次のステップ . 環境構築が完了したら、最初のプロジェクトを作成してみましょう！ . 最初のプロジェクトを始める → ",
+    "url": "/vibecoding-manual/getting-started/windows-setup/#-%E3%82%BB%E3%83%83%E3%83%88%E3%82%A2%E3%83%83%E3%83%97%E5%AE%8C%E4%BA%86",
+    
+    "relUrl": "/getting-started/windows-setup/#-セットアップ完了"
+  },"46": {
+    "doc": "Windows セットアップ",
+    "title": "Windows セットアップ",
+    "content": " ",
+    "url": "/vibecoding-manual/getting-started/windows-setup/",
+    
+    "relUrl": "/getting-started/windows-setup/"
+  }
+}

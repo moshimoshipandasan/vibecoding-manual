@@ -15,7 +15,7 @@
   
 
     
-    .site-nav > ul.nav-list:first-child > li:not(:nth-child(1)) > a,
+    .site-nav > ul.nav-list:first-child > li:not(:nth-child(2)) > a,
     .site-nav > ul.nav-list:first-child > li > ul > li a {
       background-image: none;
     }
@@ -25,12 +25,12 @@
       background-image: none;
     }
 
-    .site-nav > ul.nav-list:first-child > li:nth-child(1) > a {
+    .site-nav > ul.nav-list:first-child > li:nth-child(2) > a {
       font-weight: 600;
       text-decoration: none;
-    }.site-nav > ul.nav-list:first-child > li:nth-child(1) > button svg {
+    }.site-nav > ul.nav-list:first-child > li:nth-child(2) > button svg {
       transform: rotate(-90deg);
-    }.site-nav > ul.nav-list:first-child > li.nav-list-item:nth-child(1) > ul.nav-list {
+    }.site-nav > ul.nav-list:first-child > li.nav-list-item:nth-child(2) > ul.nav-list {
       display: block;
     }
   </style>
@@ -50,23 +50,23 @@
 
 
   <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>ホーム | Vibecoding スタートガイド</title>
+<title>環境構築 | Vibecoding スタートガイド</title>
 <meta name="generator" content="Jekyll v4.4.1" />
-<meta property="og:title" content="ホーム" />
+<meta property="og:title" content="環境構築" />
 <meta name="author" content="Vibecoding Documentation Team" />
 <meta property="og:locale" content="ja" />
-<meta name="description" content="Vibecodingを始めるためのクイックスタートガイド" />
-<meta property="og:description" content="Vibecodingを始めるためのクイックスタートガイド" />
-<link rel="canonical" href="https://moshimoshipandasan.github.io/vibecoding-manual/" />
-<meta property="og:url" content="https://moshimoshipandasan.github.io/vibecoding-manual/" />
+<meta name="description" content="プログラミング初心者のためのVibecoding入門マニュアル" />
+<meta property="og:description" content="プログラミング初心者のためのVibecoding入門マニュアル" />
+<link rel="canonical" href="https://moshimoshipandasan.github.io/vibecoding-manual/getting-started/" />
+<meta property="og:url" content="https://moshimoshipandasan.github.io/vibecoding-manual/getting-started/" />
 <meta property="og:site_name" content="Vibecoding スタートガイド" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="ホーム" />
+<meta property="twitter:title" content="環境構築" />
 <meta name="twitter:site" content="@" />
 <meta name="twitter:creator" content="@Vibecoding Documentation Team" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","author":{"@type":"Person","name":"Vibecoding Documentation Team"},"description":"Vibecodingを始めるためのクイックスタートガイド","headline":"ホーム","name":"Vibecoding スタートガイド","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://moshimoshipandasan.github.io/vibecoding-manual/assets/images/logo.png"},"name":"Vibecoding Documentation Team"},"url":"https://moshimoshipandasan.github.io/vibecoding-manual/"}</script>
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Vibecoding Documentation Team"},"description":"プログラミング初心者のためのVibecoding入門マニュアル","headline":"環境構築","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://moshimoshipandasan.github.io/vibecoding-manual/assets/images/logo.png"},"name":"Vibecoding Documentation Team"},"url":"https://moshimoshipandasan.github.io/vibecoding-manual/getting-started/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -211,150 +211,124 @@
       <div id="main-content" class="main-content">
         <main>
           
-            <h1 class="fs-9" id="vibecoding-スタートガイド">
+            <h1 class="no_toc" id="環境構築">
   
   
-    <a href="#vibecoding-スタートガイド" class="anchor-heading" aria-labelledby="vibecoding-スタートガイド"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Vibecoding スタートガイド
+    <a href="#環境構築" class="anchor-heading" aria-labelledby="環境構築"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 環境構築
   
   
 </h1>
     
 
-<p class="fs-6 fw-300">プログラミング初心者でも簡単に始められる、Vibecodingの完全ガイドです。</p>
-
-<p><a href="#getting-started" class="btn btn-primary fs-5 mb-4 mb-md-0 mr-2">環境構築を始める</a>
-<a href="https://github.com/moshimoshipandasan/vibecoding-manual" class="btn fs-5 mb-4 mb-md-0">GitHubで見る</a></p><hr />
-<h2 id="このガイドについて">
+<p class="fs-6 fw-300">Vibecodingを使い始めるための環境構築ガイドです。お使いのOSに応じて、必要なツールをインストールしていきます。</p>
+<h2 class="no_toc text-delta" id="目次">
   
   
-    <a href="#このガイドについて" class="anchor-heading" aria-labelledby="このガイドについて"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> このガイドについて
+    <a href="#目次" class="anchor-heading" aria-labelledby="目次"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 目次
   
   
 </h2>
     
 
-<p>Vibecodingは、AIの力を借りて効率的にコーディングを進めるための開発支援ツールです。このガイドでは、環境構築から最初のプロジェクト作成まで、ステップバイステップで解説します。</p>
-<h3 id="主な特徴">
+<ol id="markdown-toc">
+  <li><a href="#概要" id="markdown-toc-概要">概要</a></li>
+  <li><a href="#必要なツール" id="markdown-toc-必要なツール">必要なツール</a></li>
+  <li><a href="#セットアップの流れ" id="markdown-toc-セットアップの流れ">セットアップの流れ</a></li>
+  <li><a href="#トラブルシューティング" id="markdown-toc-トラブルシューティング">トラブルシューティング</a></li>
+</ol><hr />
+<h2 id="概要">
   
   
-    <a href="#主な特徴" class="anchor-heading" aria-labelledby="主な特徴"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 主な特徴
-  
-  
-</h3>
-    
-
-<ul>
-  <li>✨ <strong>対話型開発</strong> - AIと対話しながら要件定義を進められます</li>
-  <li>🚀 <strong>自動生成</strong> - 要件に基づいてコードを自動生成します</li>
-  <li>📚 <strong>初心者対応</strong> - プログラミング知識が少なくても始められます</li>
-  <li>🔧 <strong>簡単セットアップ</strong> - 必要なツールを順番にインストールするだけ</li>
-</ul><hr />
-<h2 id="getting-started">
-  
-  
-    <a href="#getting-started" class="anchor-heading" aria-labelledby="getting-started"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> クイックスタート
+    <a href="#概要" class="anchor-heading" aria-labelledby="概要"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 概要
   
   
 </h2>
     
-<h3 id="-前提条件の確認">
-  
-  
-    <a href="#-前提条件の確認" class="anchor-heading" aria-labelledby="-前提条件の確認"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 📋 前提条件の確認
-  
-  
-</h3>
-    
 
-<p>開発を始める前に、以下のツールがインストールされているか確認してください：</p>
-
-<ul>
-  <li><strong>Node.js</strong> (v16.0以上)</li>
-  <li><strong>Git</strong> (v2.0以上)</li>
-</ul>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Node.jsのバージョン確認</span>
-node <span class="nt">--version</span>
-
-<span class="c"># Gitのバージョン確認</span>
-git <span class="nt">--version</span>
-</code></pre></div></div>
-<h3 id="️-os別セットアップ">
-  
-  
-    <a href="#️-os別セットアップ" class="anchor-heading" aria-labelledby="️-os別セットアップ"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 🖥️ OS別セットアップ
-  
-  
-</h3>
-    
-
-<p>お使いのOSに応じて、セットアップガイドをご覧ください：</p>
-
-<div class="grid cards">
-
-- **Windows ユーザー** - [Windows セットアップガイド](/vibecoding-manual/getting-started/windows-setup/)
-- **Mac ユーザー** - [Mac セットアップガイド](/vibecoding-manual/getting-started/mac-setup/)
-
-</div>
-<h3 id="-最初のプロジェクト">
-  
-  
-    <a href="#-最初のプロジェクト" class="anchor-heading" aria-labelledby="-最初のプロジェクト"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 🎯 最初のプロジェクト
-  
-  
-</h3>
-    
-
-<p>環境構築が完了したら、<a href="/vibecoding-manual/getting-started/first-project/">最初のプロジェクト作成</a>に進みましょう。</p><hr />
-<h2 id="学習の流れ">
-  
-  
-    <a href="#学習の流れ" class="anchor-heading" aria-labelledby="学習の流れ"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 学習の流れ
-  
-  
-</h2>
-    
+<p>Vibecodingの開発環境を構築するには、以下のステップを順番に進めていきます：</p>
 
 <ol>
-  <li><strong>環境確認</strong> - 必要なツールの確認</li>
-  <li><strong>環境構築</strong> - Node.jsとGitのインストール</li>
-  <li><strong>CLIツール導入</strong> - gemini-cliとcodex-cliのインストール</li>
-  <li><strong>プロジェクト作成</strong> - <code class="language-plaintext highlighter-rouge">/init</code>コマンドで開始</li>
-</ol><hr />
-<h2 id="サポート">
+  <li><strong>前提条件の確認</strong> - 必要なツールがインストールされているか確認</li>
+  <li><strong>OS別セットアップ</strong> - WindowsまたはMacの環境に応じた設定</li>
+  <li><strong>プロジェクト作成</strong> - 最初のVibecodingプロジェクトを作成</li>
+</ol>
+<h2 id="必要なツール">
   
   
-    <a href="#サポート" class="anchor-heading" aria-labelledby="サポート"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> サポート
+    <a href="#必要なツール" class="anchor-heading" aria-labelledby="必要なツール"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> 必要なツール
   
   
 </h2>
     
 
-<p>問題が発生した場合は、各ページのトラブルシューティングセクションを参照してください。</p>
-<h3 id="コミュニティ">
+<ul>
+  <li><strong>Node.js</strong> v16.0以上</li>
+  <li><strong>Git</strong> v2.0以上</li>
+  <li><strong>gemini-cli</strong> （Node.js経由でインストール）</li>
+  <li><strong>codex-cli</strong> （Node.js経由でインストール）</li>
+</ul>
+<h2 id="セットアップの流れ">
   
   
-    <a href="#コミュニティ" class="anchor-heading" aria-labelledby="コミュニティ"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> コミュニティ
+    <a href="#セットアップの流れ" class="anchor-heading" aria-labelledby="セットアップの流れ"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> セットアップの流れ
   
   
-</h3>
+</h2>
     
 
+<pre><code class="language-mermaid">graph TD
+    A[前提条件の確認] --&gt; B{OSの選択}
+    B --&gt; C[Windows セットアップ]
+    B --&gt; D[Mac セットアップ]
+    C --&gt; E[CLIツールのインストール]
+    D --&gt; E
+    E --&gt; F[最初のプロジェクト作成]
+</code></pre>
+<h2 id="トラブルシューティング">
+  
+  
+    <a href="#トラブルシューティング" class="anchor-heading" aria-labelledby="トラブルシューティング"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> トラブルシューティング
+  
+  
+</h2>
+    
+
+<p>環境構築で問題が発生した場合は、各ページの「トラブルシューティング」セクションを参照してください。</p>
+
+<p>よくある問題：</p>
 <ul>
-  <li><a href="https://github.com/moshimoshipandasan/vibecoding-manual/issues">GitHub Issues</a> - バグ報告や質問</li>
-  <li><a href="https://github.com/moshimoshipandasan/vibecoding-manual/discussions">Discussions</a> - コミュニティでの議論</li>
+  <li>Node.jsのバージョンが古い</li>
+  <li>npmの権限エラー</li>
+  <li>Gitの初期設定が未完了</li>
 </ul><hr />
 
-<footer>
-  <p class="text-small text-grey-dk-100 mb-0">
-    このドキュメントは継続的に更新されています。最新版は<a href="https://github.com/moshimoshipandasan/vibecoding-manual">GitHubリポジトリ</a>でご確認ください。
-  </p>
-</footer>
+<p>次のステップ: <a href="/vibecoding-manual/getting-started/prerequisites/">前提条件の確認</a>から始めましょう。</p>
 
           
 
           
-            
+            <hr>
+<h2 class="text-delta">Table of contents</h2>
+
+<ul>
+  
+  <li>
+    <a href="/vibecoding-manual/getting-started/prerequisites/">前提条件の確認</a>
+  </li>
+  
+  <li>
+    <a href="/vibecoding-manual/getting-started/windows-setup/">Windows セットアップ</a>
+  </li>
+  
+  <li>
+    <a href="/vibecoding-manual/getting-started/mac-setup/">Mac セットアップ</a>
+  </li>
+  
+  <li>
+    <a href="/vibecoding-manual/getting-started/first-project/">最初のプロジェクト</a>
+  </li>
+  
+</ul>
           
         </main>
         
