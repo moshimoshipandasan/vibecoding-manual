@@ -2,6 +2,8 @@
 title: Vibecoding スタートガイド
 description: プログラミング初心者のためのVibecoding入門マニュアル
 lang: ja
+url: https://moshimoshipandasan.github.io
+baseurl: /vibecoding-manual
 
 # テーマ設定
 theme: jekyll-theme-minimal

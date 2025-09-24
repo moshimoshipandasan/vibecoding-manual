@@ -106,10 +106,10 @@ git version 2.42.0
 環境確認が完了したら、お使いのOSに応じてセットアップを進めましょう：
 
 <div class="navigation-buttons">
-  <a href="/getting-started/windows-setup" class="os-button windows">
+  <a href="{{ site.baseurl }}/getting-started/windows-setup" class="os-button windows">
     🪟 Windows セットアップへ進む
   </a>
-  <a href="/getting-started/mac-setup" class="os-button mac">
+  <a href="{{ site.baseurl }}/getting-started/mac-setup" class="os-button mac">
     🍎 Mac セットアップへ進む
   </a>
 </div>

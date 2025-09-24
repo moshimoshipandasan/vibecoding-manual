@@ -174,7 +174,7 @@ PowerShellを管理者権限で実行：
 <div class="next-step-box">
   <h3>🎯 次のステップ</h3>
   <p>環境構築が完了したら、最初のプロジェクトを作成してみましょう！</p>
-  <a href="/getting-started/first-project" class="start-button">
+  <a href="{{ site.baseurl }}/getting-started/first-project" class="start-button">
     最初のプロジェクトを始める →
   </a>
 </div>

@@ -20,13 +20,13 @@ title: Vibecoding スタートガイド
 開発を始める前の準備作業です。お使いのOSに合わせて進めてください。
 
 <div class="quick-links">
-  <a href="/getting-started/prerequisites" class="button">
+  <a href="{{ site.baseurl }}/getting-started/prerequisites" class="button">
     📋 前提条件の確認
   </a>
-  <a href="/getting-started/windows-setup" class="button">
+  <a href="{{ site.baseurl }}/getting-started/windows-setup" class="button">
     🪟 Windows セットアップ
   </a>
-  <a href="/getting-started/mac-setup" class="button">
+  <a href="{{ site.baseurl }}/getting-started/mac-setup" class="button">
     🍎 Mac セットアップ
   </a>
 </div>
@@ -35,7 +35,7 @@ title: Vibecoding スタートガイド
 環境構築が完了したら、実際にプロジェクトを作成してみましょう。
 
 <div class="quick-links">
-  <a href="/getting-started/first-project" class="button">
+  <a href="{{ site.baseurl }}/getting-started/first-project" class="button">
     🎯 プロジェクトを始める
   </a>
 </div>
@@ -70,7 +70,7 @@ Vibecoding は、AIの力を借りて効率的にコーディングを進める�
 ---
 
 <div class="navigation-footer">
-  <a href="/getting-started/prerequisites" class="next-page">
+  <a href="{{ site.baseurl }}/getting-started/prerequisites" class="next-page">
     次へ: 前提条件の確認 →
   </a>
 </div>
